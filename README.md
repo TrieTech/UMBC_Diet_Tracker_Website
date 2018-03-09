@@ -1,1 +1,1 @@
-# UMBC_Diet_Tracker_Website
+# UMBC Diet Tracker Website
