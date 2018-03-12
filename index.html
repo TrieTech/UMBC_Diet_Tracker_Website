@@ -27,20 +27,43 @@ footer{
   text-align: center;
 }
 
-nav {
-    margin-right: 170px;
-    border-right:; 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
-  }
+#nav {
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: #000000;
+}
 
-nav ul {
+#nav:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#nav ul {
     list-style-type: none;
+    margin: 0px;
     padding: 0;
 }
-   
-nav ul a {
+
+#nav li {
+    margin: 0px;
+		float: right;
+}
+
+#nav li a {
+    padding: 10px;
     text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    float: left
+}
+
+#nav li a:hover {
+    color: #FFFFFF;
+    background-color: #35af3b;
 }
 
 favorites{
@@ -56,7 +79,7 @@ input[type = text]{
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  background-image: url(searchicon.png);
+  background-image: url(res/searchicon.png);
   background-position: 10px 10px; 
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
@@ -126,22 +149,34 @@ input[type=text]:focus{
     <header>
       <h1>UMBC Diet Tracker (Image Goes Here)</h1>
     </header>
-    <div class ="toolbar">
-      <a href="DTlogin.html" title="login page">Sign In/Join</a>
-      <a href="DTcontactus.html" title="contact us page">Contact Us</a>
-      <a href="DTlogin.html" title="login page">Sign In/Join</a>
-      <a href="DTcontactus.html" title="contact us page">Contact Us</a>
-      <a href="index.html" title="homepage">Home</a>
-      <input type="text" name="search" placeholder="Search..">
-    </div>
+		
+    <!-- <div class ="toolbar"> -->
+      <!-- <a href="DTlogin.html" title="login page">Sign In/Join</a> -->
+      <!-- <a href="DTcontactus.html" title="contact us page">Contact Us</a> -->
+      <!-- <a href="DTlogin.html" title="login page">Sign In/Join</a> -->
+      <!-- <a href="DTcontactus.html" title="contact us page">Contact Us</a> -->
+      <!-- <a href="index.html" title="homepage">Home</a> -->
+      <!-- <input type="text" name="search" placeholder="Search.."> -->
+    <!-- </div> -->
+		
+		<div id="nav">
+			<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Music</a></li>
+					<li><a href="#">Education</a></li>
+					<li><a href="#">Fun</a></li>
+					<li><a href="#">Entertainment</a></li>
+					<li><a href="#">Utilities</a></li>
+			</ul>
+	</div>
 
 <favorites>
   <h1>Favorites</h1>
   <div class ="grid-container">
-    <div class="grid-item"><img src="bmr_calculator_icon2.png" alt="BMR Calc" style="height: 50px; width: 50px;"/></div>
-    <div class="grid-item"><img src="food_plan_icon.png" alt="Food Plan" style="height: 50px; width: 50px;"/></div>
-    <div class="grid-item"><img src="maps_icon.png" alt="maps" style="height: 50px; width: 50px;"/></div>
-    <div class="grid-item"><img src="BMR_Calculator.jpeg" alt="other BMR" style="height: 50px; width: 50px;"/></div>
+    <div class="grid-item"><img src="res/bmr_calculator_icon2.png" alt="BMR Calc" style="height: 50px; width: 50px;"/></div>
+    <div class="grid-item"><img src="res/food_plan_icon.png" alt="Food Plan" style="height: 50px; width: 50px;"/></div>
+    <div class="grid-item"><img src="res/maps_icon.png" alt="maps" style="height: 50px; width: 50px;"/></div>
+    <div class="grid-item"><img src="res/BMR_Calculator.jpeg" alt="other BMR" style="height: 50px; width: 50px;"/></div>
   </div>
 </favorites>
 
