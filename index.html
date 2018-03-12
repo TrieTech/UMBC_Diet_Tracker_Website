@@ -33,7 +33,7 @@ footer{
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
-    background-color: #000000;
+    background-color: #e9e9e9;
 }
 
 #nav:after {
@@ -50,14 +50,14 @@ footer{
 
 #nav li {
     margin: 0px;
-		float: right;
+	float: left;
 }
 
 #nav li a {
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
-    color: #FFFFFF;
+    color: black;
     float: left
 }
 
@@ -73,21 +73,62 @@ favorites{
     overflow: hidden;
 }
 
-input[type = text]{
-  width:130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-image: url(res/searchicon.png);
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out
+input {
+	outline: none;
 }
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+input[type = text]{
+  	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) 
+  	no-repeat 9px center;
+	border: solid 1px #ccc;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type=search]:hover {
+	background-color: #fff;
+	}
+
 input[type=text]:focus{
-  width: 100%;
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+
+	padding-left: 32px;
+	color: #000;
+	cursor: auto;
+}
+
+input:-moz-placeholder {
+	color: transparent;
+}
+input::-webkit-input-placeholder {
+	color: transparent;
 }
 
 .toolbar {
@@ -161,12 +202,12 @@ input[type=text]:focus{
 		
 		<div id="nav">
 			<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Music</a></li>
-					<li><a href="#">Education</a></li>
+					<li><a href="index.html" title="homepage">Home</a></li>
+					<li><a href="DTlogin.html" title="login page">Sign In/Join</a></li>
+					<li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
 					<li><a href="#">Fun</a></li>
 					<li><a href="#">Entertainment</a></li>
-					<li><a href="#">Utilities</a></li>
+					<li><a href="index.html" title="homepage">Home</a></li>
 					<input type="text" name="search" placeholder="Search..">
 			</ul>
 	</div>
