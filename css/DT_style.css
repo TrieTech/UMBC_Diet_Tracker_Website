@@ -46,6 +46,7 @@ body{
   width: 520px;
   background: gray;
   overflow-y: auto;
+  background-color: black;
 }
 
 .grid-container > a{
