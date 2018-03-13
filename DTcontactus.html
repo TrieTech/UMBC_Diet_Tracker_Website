@@ -3,53 +3,104 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
 <title>Contact Us</title>
-<style type="text/css">
-footer{
-  padding: 1em;
-  color: white;
-  background-color: gray;
-  clear: left;
-  text-align: center;
+<link rel="stylesheet" href="./css/DietTrackerStyle.css">
+<link rel="stylesheet" type="text/css" href="DT_style.css" title="style" />
+<style>
+input.contact[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
+input.contact[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input.contact[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.ncontainer {
+	width: 50%;
+	position: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 </style>
-<link rel="stylesheet" type="text/css" href="DT_style.css" title="style" />
 </head>
 <body>
 	<div class = "container">
 	<header>
       <h1>UMBC Diet Tracker (Image Goes Here)</h1>
     </header>
+    <div id="nav">
+            <ul>
+                <li><a href="index.html" title="homepage">Home</a></li>
+                <li><a href="DTlogin.html" title="login page">Sign In/Join</a></li>
+                <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
+                <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="index.html" title="homepage">Home</a></li>
+                <input type="text" name="search" placeholder="Search.." action="">
+            </ul>
+        </div>
+        <div class="ncontainer">
+        	<form class = "contact" action="">
+        		<label for="fname">First Name</label>
+        		<input class = "contact" type="text" id="fname" name="firstname" placeholder="Your name..">
+        		<br/>
+        		<label for="lname">Last Name</label>
+        		<input class = "contact" type="text" id="lname" name="lastname" placeholder="Your last name..">
+        		<br/>
+        		<label for="country">Country</label>
+        		<select class = "contact" id="country" name="country">
+        			<option value="australia">Australia</option>
+      				<option value="canada">Canada</option>
+      				<option value="usa">USA</option>
+      			</select>
+
+    <label for="subject">Subject</label>
+    <textarea class = "contact" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input class = "contact" type="submit" value="Submit">
+  </form>
+</div>
 	<div class="nav2">
 		<h1>Contact Us</h1>
-		<div class ="login">
-	<form action ="">
-		<p>
-			<label>Name:*<input type="text" name="fname"/>
-			</label>
-			<br/><label>Phone:<input type="text" name="pnum"/>
-			</label>
-			<br/><label>email:*<input type="text" name="email"/>
-			</label>
-			<label>@
-				<select name = "Email Provider">
-					<option>--Please Choose--</option>
-					<option>yahoo.com</option>
-					<option>gmail.com</option>
-					<option>aol.com</option>
-					<option>hotmail.com</option>
-				</select>
-			</label>
-		</p>
-
-		<p>
-			<button type="submit" value="Submit">Submit Form</button>
-			<button type="Reset" value="Submit">Reset</button>
-			
-	</p>
-	
-</form>
-</div>
+		<form action ="">
+			<p>
+				<label>Name:*<input type="submit" name="fname"/>
+				</label>
+				<br/><label>Phone:<input type="text" name="pnum"/>
+				</label>
+				<br/><label>email:*<input contact ="contact" type="submit" name="email"/>
+				</label>
+				<label>@
+					<select name = "Email Provider">
+						<option>--Please Choose--</option>
+						<option>yahoo.com</option>
+						<option>gmail.com</option>
+						<option>aol.com</option>
+						<option>hotmail.com</option>
+					</select>
+				</label>
+			</p>
+			<p>
+				<button type="submit" value="Submit">Submit Form</button>
+				<button type="Reset" value="Submit">Reset</button>
+			</p>
+	</form>
 </div>
 
 <footer>Copyright &copy;AlphaTech.com
