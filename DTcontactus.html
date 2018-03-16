@@ -3,41 +3,8 @@
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
 <title>Contact Us</title>
-<link rel="stylesheet" href="./css/DietTrackerStyle.css">
-<link rel="stylesheet" type="text/css" href="DT_style.css" title="style" />
-<style>
-input.contact[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input.contact[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input.contact[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.ncontainer {
-	width: 50%;
-	position: center;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="./css/DT_Style.css" />
+<link rel="stylesheet" type="text/css" href="./css/DT_ContactUs.css" />
 </head>
 <body>
 	<div class = "container">
@@ -52,7 +19,7 @@ input.contact[type=submit]:hover {
                 <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
                 <li><a href="#">Entertainment</a></li>
                 <li><a href="index.html" title="homepage">Home</a></li>
-                <input type="text" name="search" placeholder="Search.." action="">
+                <input class="search" type="text" name="search" placeholder="Search.." action="">
             </ul>
         </div>
         <div class="ncontainer">
@@ -80,11 +47,11 @@ input.contact[type=submit]:hover {
 		<h1>Contact Us</h1>
 		<form action ="">
 			<p>
-				<label>Name:*<input type="submit" name="fname"/>
+				<label>Name:*<input type="text" name="fname"/>
 				</label>
 				<br/><label>Phone:<input type="text" name="pnum"/>
 				</label>
-				<br/><label>email:*<input contact ="contact" type="submit" name="email"/>
+				<br/><label>email:*<input contact ="contact" type="text" name="email"/>
 				</label>
 				<label>@
 					<select name = "Email Provider">
