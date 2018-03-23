@@ -373,8 +373,7 @@ input.search::-webkit-input-placeholder {
 }
 
 .toolbar2{
-  ont: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  float: center;
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
 }
 
 @media screen and (max-width: 600px) {
