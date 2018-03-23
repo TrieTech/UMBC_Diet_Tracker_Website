@@ -155,7 +155,7 @@ input[type=search].search:hover {
 	}
 
 input[type=text].search:focus{
-	width: 1000px;
+	width: 50vw; /*Expand to 50% of the viewport width*/
 	background-color: #fff;
 	border-color: #66CC75;
 	
@@ -197,6 +197,7 @@ input.search::-webkit-input-placeholder {
     font-size: .9em;
 }
 
+/*Give the tooltips their speech bubble feel by pointing at the widget which invoked it.*/
 [tooltip]::before {
     content: '';
     z-index: 1001;
@@ -334,27 +335,6 @@ input.search::-webkit-input-placeholder {
         forwards;
 }
 /*End Tooltip CSS*/
-
-.grid-container{
-  width: 520px;
-  background: transparent;
-  overflow-y: auto;
-  background-color: transparent;
-}
-
-.grid-container > a{
-  width: 100px;
-  height: 100px;
-  float: left;
-  background: transparent;
-  margin: 15px;
-}
-
-.grid-item{
-  background-color: transparent;
- 
-  padding: 20px; 
-}
 
 .toolbar {
   overflow: hidden;
