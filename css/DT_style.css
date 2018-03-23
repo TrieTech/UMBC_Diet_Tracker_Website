@@ -101,8 +101,16 @@ input[type = text].search{
 	width: 25px;
 	height: 30px;
 	padding-left: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 4px;
+	margin-right: 10px;
 	color: transparent;
 	cursor: pointer;
+
+	/*Make the Search icon appear on the right of the nav bar*/
+	float: right;
+	clear: right;
 }
 
 input[type=search].search:hover {
@@ -110,7 +118,7 @@ input[type=search].search:hover {
 	}
 
 input[type=text].search:focus{
-	width: 130px;
+	width: 1000px;
 	background-color: #fff;
 	border-color: #66CC75;
 	
@@ -121,6 +129,8 @@ input[type=text].search:focus{
 	padding-left: 32px;
 	color: #000;
 	cursor: auto;
+	float: right;
+	clear: right;
 }
 
 input.search:-moz-placeholder {
