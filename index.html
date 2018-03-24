@@ -32,20 +32,57 @@
                 <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
                 <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
                 <li><a href="#">Entertainment</a></li>
-                <li><a href="index.html" title="homepage">Home</a></li>
-                <input class = "search" type="text" name="search" placeholder="Search.." action="">
+                <li class="float-right"><input class="search" type="text" name="search"/></li>
             </ul>
         </div>
 
-        <favorites>
+        <div class="favorites">
             <h1>Favorites</h1>
-            <div class="grid-container">
+
+            <div class="scrollable"> 
+                <table>
+                    <tr>
+                        <td class="favorite-item">
+                            <a href="#"><img src="res/bmr_calculator_icon2.png" alt="BMR Calc"/></a>
+                            <span class="caption">BMR Calculator</span>
+                        </td>  
+                                              
+                        <td class="favorite-item">
+                            <a href="#"><img src="res/food_plan_icon.png" alt="Food Plan"/></a>
+                            <span class="caption">Food Plan</span>
+                        </td>
+
+                        <td class="favorite-item">
+                            <a href="#"><img src="res/maps_icon.png" alt="maps"/></a>
+                            <span class="caption">Maps</span>
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td class="favorite-item">
+                            <a href="#"><img src="res/bmi_calculator_icon.png" alt="BMI Calc"/></a>
+                            <span class="caption">BMI Calculator</span>
+                        </td>
+
+                        <td class="favorite-item">  
+                            <span tooltip="Add a Favorite" flow="down">                            
+                                <a href="#"><img class="add_favorite" src="res/add_button.png" alt="Add Favorite"/></a>      
+                            </span>                      
+                        </td>
+
+                        <td class="favorite-item">
+                            
+                        </td>
+                    </tr>
+                </table>                  
+            </div>
+
+            <!-- <div class="grid-container">
                 <div class="grid-item"><img src="res/bmr_calculator_icon2.png" alt="BMR Calc" style="height: 50px; width: 50px;" /></div>
                 <div class="grid-item"><img src="res/food_plan_icon.png" alt="Food Plan" style="height: 50px; width: 50px;" /></div>
                 <div class="grid-item"><img src="res/maps_icon.png" alt="maps" style="height: 50px; width: 50px;" /></div>
                 <div class="grid-item"><img src="res/BMR_Calculator.jpeg" alt="other BMR" style="height: 50px; width: 50px;" /></div>
-            </div>
-        </favorites>
+            </div> -->
+        </div>
 
         <footer>Copyright &copy;&nbsp;AlphaTech.com
             <div class="toolbar2">
