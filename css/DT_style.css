@@ -9,7 +9,7 @@ body{
   background: #0ca3d2;
 }
 
-header{
+.header{
   padding: 1em;
   color: white;
   background-color: black;
@@ -17,7 +17,7 @@ header{
   text-align: center;
 }
 
-footer{
+.footer{
   padding: 1em;
   color: white;
   background-color: gray;
@@ -127,7 +127,7 @@ input.search {
 	float: right;
 }
 
-input[type=search].search {
+input[type=text].search {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	font-family: inherit;
@@ -139,7 +139,7 @@ input::-webkit-search-cancel-button.search {
 	display: none; 
 }
 
-input[type = text].search{
+input[type=text].search{
   	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) 
   	no-repeat 9px center;
 	border: solid 1px #ccc;
@@ -167,9 +167,9 @@ input[type = text].search{
 	clear: right;
 }
 
-input[type=search].search:hover {
+input[type=text].search:hover {
 	background-color: #fff;
-	}
+}
 
 input[type=text].search:focus{
 	width: 50vw; /*Expand to 50% of the viewport width*/
