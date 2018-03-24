@@ -89,6 +89,10 @@ footer{
     margin-top: 45px;
 }
 
+td span{
+	display: block;
+}
+
 td.favorite_item{
 	vertical-align: top;
     display: inline-block;
@@ -104,7 +108,7 @@ td.favorite_item{
 }
 
 .scrollable {
-    height: 200px;
+    height: 300px;
     overflow-y: auto;
 }
 
