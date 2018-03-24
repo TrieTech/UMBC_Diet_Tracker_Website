@@ -9,7 +9,7 @@ body{
   background: #0ca3d2;
 }
 
-header{
+.header{
   padding: 1em;
   color: white;
   background-color: black;
@@ -17,7 +17,7 @@ header{
   text-align: center;
 }
 
-footer{
+.footer{
   padding: 1em;
   color: white;
   background-color: gray;
