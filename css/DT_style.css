@@ -4,7 +4,7 @@ div.container {
 }
 
 body{
-  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font: 13px/20px 'Lucida Grande', 'Tahoma', 'Verdana', 'sans-serif';
   color: #404040;
   background: #0ca3d2;
 }
@@ -93,12 +93,14 @@ td span{
 	display: block;
 }
 
-td.favorite_item{
+td.favorite-item{
 	vertical-align: top;
     display: inline-block;
     text-align: center;
     width: 200px;
     margin-right: 100px;
+    margin-left: 25px;
+    margin-top: 25px;
 }
 
 .caption {
@@ -108,6 +110,10 @@ td.favorite_item{
 }
 
 .scrollable {
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	font-size: 18px;
+	background: #56d0f5;
     height: 300px;
     overflow-y: auto;
 }
@@ -115,14 +121,21 @@ td.favorite_item{
 input.search {
 	outline: none;
 }
+
+/*Ensure the encased tag is floating to the right*/
+#nav .float-right{
+	float: right;
+}
+
 input[type=search].search {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
 	font-family: inherit;
 	font-size: 100%;
 }
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button {
+
+input::-webkit-search-decoration.search,
+input::-webkit-search-cancel-button.search {
 	display: none; 
 }
 
