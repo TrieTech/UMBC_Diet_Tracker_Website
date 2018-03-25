@@ -134,8 +134,8 @@ input[type=text].search {
 	font-size: 100%;
 }
 
-input::-webkit-search-decoration.search,
-input::-webkit-search-cancel-button.search {
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
 	display: none; 
 }
 
@@ -196,96 +196,47 @@ input.search::-webkit-input-placeholder {
 }
 
 /*Refactored Tooltip CSS*/
-.tooltip-down{
-	position: relative; /* opinion 1 */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
 }
 
-.tooltip-down::before,
-.tooltip-down::after{
-  text-transform: none; /* opinion 2 */
-  font-size: .9em; /* opinion 3 */
-  line-height: 1;
-  user-select: none;
-  pointer-events: none;
-  position: absolute;
-  display: none;
-  opacity: 0;
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+    top: 150%;
+    left: 40%; /*50%*/
+    margin-left: -90px; /*-1 * (width / 2)*/
+
+    /* Fade in tooltip - takes 1.5 seconds to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1.5s; /*1s*/
 }
 
-.tooltip-down::before{
-  content: '';
-  border: 5px solid transparent; /* opinion 4 */
-  z-index: 1001; /* absurdity 1 */
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
 }
 
-.tooltip-down::after {
-  content: attr(tooltip); /* magic! */
-  
-  /* most of the rest of this is opinion */
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-  
-  /* 
-    Let the content set the size of the tooltips 
-    but this will also keep them from being obnoxious
-    */
-  min-width: 3em;
-  max-width: 21em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 1ch 1.5ch;
-  border-radius: .3ch;
-  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
-  background: #333;
-  color: #fff;
-  z-index: 1000; /* absurdity 2 */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
-
-/* Make the tooltips respond to hover */
-.tooltip-down:hover::before,
-.tooltip-down:hover::after {
-  display: block;
-}
-
-/* FLOW: DOWN */
-.tooltip-down::before {
-  top: 100%;
-  border-top-width: 0;
-  border-bottom-color: #333;
-}
-
-.tooltip-down::after {
-  top: calc(100% + 5px);
-}
-
-.tooltip-down::before,
-.tooltip-down::after {
-  left: 50%;
-  transform: translate(-50%, .5em);
-}
-
-/* KEYFRAMES */
-@keyframes tooltips-vert {
-  to {
-    opacity: .9;
-    transform: translate(-50%, 0);
-  }
-}
-
-@keyframes tooltips-horz {
-  to {
-    opacity: .9;
-    transform: translate(0, -50%);
-  }
-}
-
-/* FX All The Things */ 
-.tooltip-down:hover::before,
-.tooltip-down:hover::after {
-  animation: tooltips-vert 300ms ease-out forwards;
-}
-
 /*End Refactored Tooltip CSS*/
 
 .toolbar {
