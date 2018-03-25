@@ -279,6 +279,12 @@ input.search::-webkit-input-placeholder {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
 }
 
+<<<<<<< HEAD
+
+
+
+
+=======
 @media screen and (max-width: 600px) {
   .toolbar a, .toolbar input[type=text].search {
     float: none;
@@ -292,3 +298,4 @@ input.search::-webkit-input-placeholder {
     border: 1px solid #ccc;  
   }
 }
+>>>>>>> c561bb291f1dbf0038c1746b7649c99293adcefa
