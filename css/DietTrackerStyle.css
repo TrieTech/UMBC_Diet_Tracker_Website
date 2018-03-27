@@ -85,6 +85,26 @@ input::-webkit-search-cancel-button {
 	display: none; 
 }
 
+.input-style{
+	
+  	no-repeat 9px center;
+	border: solid 1px #ccc;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 20em;
+	border-radius: 25em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+
+	width: 25px;
+	height: 30px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+	
+}
 input[type = text]{
   	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) 
   	no-repeat 9px center;
