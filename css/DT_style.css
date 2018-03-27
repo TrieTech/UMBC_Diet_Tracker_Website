@@ -25,7 +25,7 @@ body{
   text-align: center;
   position:absolute;
   right: 0;
-  bottom: 1;
+  bottom: auto;
   left: 0;
 }
 
@@ -141,6 +141,14 @@ td.favorite-item{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+}
+
+.video-main {
+  background-image: url(./res/profileback.jpg);
+  width: 100%;
+  position: center;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 input.search {

@@ -1,12 +1,16 @@
 .profile-main {
-	width: 100%;
 	background-image: url(./res/profileback.jpg);
-	position: relative;
+	width: 30%;
+   float: right;
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
-div.prof-container {
+.prof-container {
   width: 30%;
-	position: left;
+  position: left;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -49,7 +53,6 @@ p {
     /*border-left: 1px solid gray;*/
     padding: 1em;
     /*overflow: hidden;*/
-    position: right;
 }
 
 .pfavorites img{
@@ -93,5 +96,4 @@ td.pfavorite-item{
   background: #56d0f5;
     height: 300px;
     overflow-y: auto;
-    position: right;
 }
