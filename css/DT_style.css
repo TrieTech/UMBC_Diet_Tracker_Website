@@ -68,6 +68,11 @@ body{
     background-color: #35af3b;
 }
 
+#nav li a.active{
+	color: #FFFFFF;
+    background-color: #35af3b;
+}
+
 .favorites{
     /*margin-left: 170px;*/
     /*border-left: 1px solid gray;*/
