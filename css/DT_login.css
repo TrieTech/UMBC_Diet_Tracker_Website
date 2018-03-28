@@ -1,7 +1,6 @@
 .logcontainer {
   margin: 80px auto;
   width: 640px;
-  background-color: #f2f2f2;
 }
 
 .login {
@@ -126,7 +125,7 @@ input[type=text].login:focus, input[type=password].login:focus {
   outline-offset: 0;
 }
 
-input[type=submit].login {
+input[type=submit].submit {
   padding: 0 18px;
   height: 29px;
   font-size: 12px;
@@ -148,7 +147,7 @@ input[type=submit].login {
   -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-input[type=submit].login:active {
+input[type=submit].submit:active {
   background: #cde5ef;
   border-color: #9eb9c2 #b3c0c8 #b4ccce;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);

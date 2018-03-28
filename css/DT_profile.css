@@ -1,0 +1,99 @@
+.profile-main {
+	background-image: url(./res/profileback.jpg);
+	width: 30%;
+   float: right;
+
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.prof-container {
+  width: 30%;
+  position: left;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+img.headericon {
+  float: left;
+  width: 22px;
+  height: 22px;
+}
+
+p {
+  font-family:Verdana, Tahoma, sans-serif;
+  font-size: 12pt;
+  padding-bottom: 10px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.pfavorites{
+    /*margin-left: 170px;*/
+    /*border-left: 1px solid gray;*/
+    padding: 1em;
+    /*overflow: hidden;*/
+}
+
+.pfavorites img{
+  height: 200px;
+    width: 200px;
+    margin-right: 100px;
+}
+
+.pfavorites img.add_favorite{
+  height: 100px;
+    width: 100px;
+    margin-left: 45px;
+    margin-right: 100px;
+    margin-top: 45px;
+}
+
+td span{
+  display: block;
+}
+
+td.pfavorite-item{
+  vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    margin-right: 100px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.caption {
+    display: block;
+    margin-bottom: 85px;
+    width: 100%;
+}
+
+.pscrollable {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  font-size: 18px;
+  background: #56d0f5;
+    height: 300px;
+    overflow-y: auto;
+}
