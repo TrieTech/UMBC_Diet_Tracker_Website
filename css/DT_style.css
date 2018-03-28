@@ -205,7 +205,7 @@ input[type=text].search:hover {
 }
 
 input[type=text].search:focus{
-	width: 50vw; /*Expand to 50% of the viewport width*/
+	width: 35vw; /*Expand to 35% of the viewport width*/
 	background-color: #fff;
 	border-color: #66CC75;
 	
