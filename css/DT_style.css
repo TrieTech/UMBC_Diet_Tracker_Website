@@ -145,7 +145,6 @@ td.favorite-item{
 
 .video-main {
   background-image: url(./res/profileback.jpg);
-  position: center;
   border-radius: 5px;
   padding: 20px;
   clear: left;
