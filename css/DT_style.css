@@ -145,10 +145,10 @@ td.favorite-item{
 
 .video-main {
   background-image: url(./res/profileback.jpg);
-  width: 100%;
   position: center;
   border-radius: 5px;
   padding: 20px;
+  clear: left;
 }
 
 input.search {
