@@ -327,7 +327,6 @@ input.search::-webkit-input-placeholder {
 .about{
 		font-family: Lucida Grande;
 		font-size: 20px;
-		width: 1100px;
 		padding:1in;
 		background-color: #dcf1e3;
         border:2px solid gray;
