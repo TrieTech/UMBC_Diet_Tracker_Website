@@ -7,23 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_Style.css" />
+    <script type="text/javascript" src="./js/DTbehavior.js"></script>
 </head>
 
-<body>
+<body>    
+    <!-- The overlays for the favorites that will launch the respective app when clicked -->
+    <div id="BMRCalcNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <!-- content here -->
+      </div>
+
+    </div>
+
     <!--This page will describe who I am and Student role at UMBC -->
     <div class="container">
         <div class="header">
             <p><img src="res/diettrackerbanner.png" width="100%" height="225" alt="banner" /></p>
         </div>
-
-        <!-- <div class ="toolbar"> -->
-        <!-- <a href="DTlogin.html" title="login page">Sign In/Join</a> -->
-        <!-- <a href="DTcontactus.html" title="contact us page">Contact Us</a> -->
-        <!-- <a href="DTlogin.html" title="login page">Sign In/Join</a> -->
-        <!-- <a href="DTcontactus.html" title="contact us page">Contact Us</a> -->
-        <!-- <a href="index.html" title="homepage">Home</a> -->
-        <!-- <input type="text" name="search" placeholder="Search.."> -->
-        <!-- </div> -->
 
         <div id="nav">
             <ul>
@@ -34,7 +39,7 @@
                 <li><a href="#">Entertainment</a></li>
                 <li class="float-right"><input class="search" type="text" name="search" /></li>
             </ul>
-        </div>
+        </div>      
 
         <div class="favorites">
             <h1>Favorites</h1>
@@ -43,35 +48,36 @@
                 <table>
                     <tr>
                         <td class="favorite-item">
-                            <a href="#"><img src="res/bmr_calculator_icon2.png" alt="BMR Calc"/></a>
-                            <span class="caption">BMR Calculator</span>
+                            <img src="res/bmr_calculator_icon2.png" onclick="openNav()"  alt="BMR Calc"/>
+                            <span class="caption" >BMR Calculator</span>
                         </td>
 
                         <td class="favorite-item">
-                            <a href="#"><img src="res/food_plan_icon.png" alt="Food Plan"/></a>
+                            <img src="res/food_plan_icon.png" onclick="openNav()" alt="Food Plan"/>
                             <span class="caption">Food Plan</span>
                         </td>
 
                         <td class="favorite-item">
-                            <a href="#"><img src="res/maps_icon.png" alt="maps"/></a>
+                            <img src="res/maps_icon.png" onclick="openNav()" alt="maps"/>
                             <span class="caption">Maps</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="favorite-item">
-                            <a href="#"><img src="res/bmi_calculator_icon.png" alt="BMI Calc"/></a>
+                            <img src="res/bmi_calculator_icon.png" onclick="openNav()" alt="BMI Calc"/>
                             <span class="caption">BMI Calculator</span>
                         </td>
 
                         <td class="favorite-item">
                             <div class="tooltip">
-                                <a href="#"><img class="add_favorite" src="res/add_button.png" alt="Add Favorite"/></a>
+                                <img class="add_favorite" src="res/add_button.png" onclick="openNav()" alt="Add Favorite"/>
                                 <span class="tooltip-text"> Add a Favorite </span>
                             </div>
                         </td>
 
                         <td class="favorite-item">
-
+                            <!--Place favorite here (must be three favorites per row for formatting purposes)-->
+                            <!--DO NOT REMOVE-->
                         </td>
                     </tr>
                 </table>
