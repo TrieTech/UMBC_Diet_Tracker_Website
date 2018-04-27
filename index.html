@@ -19,7 +19,25 @@
 
       <!-- Overlay content -->
       <div class="overlay-content">
-        <!-- content here -->
+        <img src="res/diet_tracker_chicklet.png" alt="Diet Tracker"/>
+        <h1>Diet Tracker</h1>
+        <form action="" onsubmit="" id="dietTrackerForm" method="POST">
+          <p>
+            Foods: <input type="text" name="title" size="25" maxlength="25"/>
+            Calories: <input type="text" name="title" size="25" maxlength="25"/>
+          </p>
+
+           <p>
+            Physical: <input type="text" name="title" size="25" maxlength="25"/>
+          </p>
+
+          <!--A submit button and a reset button. The submit button submits all the input data.
+          The reset button clears all text fields and initializes everything back to the default state.-->
+          <p>
+            <input class="round_button" type="submit" value="Submit"/>
+            <input class="round_button" type="reset" value="Reset"/>       
+          </p>
+        </form> 
       </div>
 
     </div>
@@ -145,7 +163,7 @@
 
         <div class="video-main">
             <object width="100%" height="315px">
-                <param name="movie" value="https://www.youtube.com/embed/-mW55jAeBOE?autoplay=1"></param>
+                <param name="movie" value="https://www.youtube.com/embed/-mW55jAeBOE?autoplay=0"></param>
                 <param name="allowFullScreen" value="true"></param>
              </object>
         </div>
