@@ -15,7 +15,55 @@
     <div id="BMRCalcNav" class="overlay">
 
       <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav('BMRCalcNav')">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <!-- content here -->
+      </div>
+
+    </div>
+
+    <div id="FoodPlanNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav('FoodPlanNav')">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <!-- content here -->
+      </div>
+
+    </div>
+
+    <div id="MapsNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav('MapsNav')">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <!-- content here -->
+      </div>
+
+    </div>
+
+    <div id="BMICalcNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav('BMICalcNav')">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <!-- content here -->
+      </div>
+
+    </div>
+
+    <div id="AddFavNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav('AddFavNav')">&times;</a>
 
       <!-- Overlay content -->
       <div class="overlay-content">
@@ -48,29 +96,29 @@
                 <table>
                     <tr>
                         <td class="favorite-item">
-                            <img src="res/bmr_calculator_icon2.png" onclick="openNav()"  alt="BMR Calc"/>
+                            <img src="res/bmr_calculator_icon2.png" onclick="openNav('BMRCalcNav')"  alt="BMR Calc"/>
                             <span class="caption" >BMR Calculator</span>
                         </td>
 
                         <td class="favorite-item">
-                            <img src="res/food_plan_icon.png" onclick="openNav()" alt="Food Plan"/>
+                            <img src="res/food_plan_icon.png" onclick="openNav('FoodPlanNav')" alt="Food Plan"/>
                             <span class="caption">Food Plan</span>
                         </td>
 
                         <td class="favorite-item">
-                            <img src="res/maps_icon.png" onclick="openNav()" alt="maps"/>
+                            <img src="res/maps_icon.png" onclick="openNav('MapsNav')" alt="maps"/>
                             <span class="caption">Maps</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="favorite-item">
-                            <img src="res/bmi_calculator_icon.png" onclick="openNav()" alt="BMI Calc"/>
+                            <img src="res/bmi_calculator_icon.png" onclick="openNav('BMICalcNav')" alt="BMI Calc"/>
                             <span class="caption">BMI Calculator</span>
                         </td>
 
                         <td class="favorite-item">
                             <div class="tooltip">
-                                <img class="add_favorite" src="res/add_button.png" onclick="openNav()" alt="Add Favorite"/>
+                                <img class="add_favorite" src="res/add_button.png" onclick="openNav('AddFavNav')" alt="Add Favorite"/>
                                 <span class="tooltip-text"> Add a Favorite </span>
                             </div>
                         </td>
@@ -82,15 +130,6 @@
                     </tr>
                 </table>
             </div>
-
-
-
-            <!-- <div class="grid-container">
-                <div class="grid-item"><img src="res/bmr_calculator_icon2.png" alt="BMR Calc" style="height: 50px; width: 50px;" /></div>
-                <div class="grid-item"><img src="res/food_plan_icon.png" alt="Food Plan" style="height: 50px; width: 50px;" /></div>
-                <div class="grid-item"><img src="res/maps_icon.png" alt="maps" style="height: 50px; width: 50px;" /></div>
-                <div class="grid-item"><img src="res/BMR_Calculator.jpeg" alt="other BMR" style="height: 50px; width: 50px;" /></div>
-            </div> -->
         </div>
 
         <div class="video-main">

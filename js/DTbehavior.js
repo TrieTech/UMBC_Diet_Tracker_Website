@@ -1,9 +1,9 @@
 /* Open */
-function openNav() {
-    document.getElementById("BMRCalcNav").style.height = "100%";
+function openNav(id) {
+    document.getElementById(id).style.height = "100%";
 }
 
 /* Close */
-function closeNav() {
-    document.getElementById("BMRCalcNav").style.height = "0%";
+function closeNav(id) {
+    document.getElementById(id).style.height = "0%";
 }
