@@ -12,6 +12,18 @@
 
 <body>    
     <!-- The overlays for the favorites that will launch the respective app when clicked -->
+    <div id="DietTrackerNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav('DietTrackerNav')">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <!-- content here -->
+      </div>
+
+    </div>
+    
     <div id="BMRCalcNav" class="overlay">
 
       <!-- Button to close the overlay navigation -->
@@ -95,6 +107,11 @@
                 <table>
                     <tr>
                         <td class="favorite-item">
+                            <img src="res/diet_tracker_chicklet.png" onclick="openNav('DietTrackerNav')" alt="Diet Tracker"/>
+                            <span class="caption">Diet Tracker</span>
+                        </td>
+
+                        <td class="favorite-item">
                             <img src="res/bmr_calculator_icon2.png" onclick="openNav('BMRCalcNav')"  alt="BMR Calc"/>
                             <span class="caption" >BMR Calculator</span>
                         </td>
@@ -102,11 +119,6 @@
                         <td class="favorite-item">
                             <img src="res/food_plan_icon.png" onclick="openNav('FoodPlanNav')" alt="Food Plan"/>
                             <span class="caption">Food Plan</span>
-                        </td>
-
-                        <td class="favorite-item">
-                            <img src="res/maps_icon.png" onclick="openNav('MapsNav')" alt="maps"/>
-                            <span class="caption">Maps</span>
                         </td>
                     </tr>
                     <tr>
@@ -116,15 +128,15 @@
                         </td>
 
                         <td class="favorite-item">
+                            <img src="res/maps_icon.png" onclick="openNav('MapsNav')" alt="maps"/>
+                            <span class="caption">Maps</span>
+                        </td>
+
+                        <td class="favorite-item">
                             <div class="tooltip">
                                 <img class="add_favorite" src="res/add_button.png" onclick="openNav('AddFavNav')" alt="Add Favorite"/>
                                 <span class="tooltip-text"> Add a Favorite </span>
                             </div>
-                        </td>
-
-                        <td class="favorite-item">
-                            <!--Place favorite here (must be three favorites per row for formatting purposes)-->
-                            <!--DO NOT REMOVE-->
                         </td>
                     </tr>
                 </table>
