@@ -370,6 +370,13 @@ color: blue;
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    color: white;
+}
+
+.overlay-content form{
+    width: fit-content;
+    display: inline-block;
+    text-align: left;
 }
 
 .overlay a {
@@ -400,4 +407,23 @@ color: blue;
     top: 15px;
     right: 35px;
   }
+}
+
+.round_button {
+  border-top: 2px solid #a3ceda;
+  border-left: 2px solid #a3ceda;
+  border-right: 2px solid #4f6267;
+  border-bottom: 2px solid #4f6267;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: bold;
+  background-color: #c4f1fe;
+  color: #2d525d;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.round_button:hover {
+  background-color: #2d525d; 
+  color: #c4f1fe;
 }
