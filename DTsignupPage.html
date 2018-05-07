@@ -22,7 +22,7 @@
             </ul>
         </div>
 
-<form action="Sign_up" id="SignUp" method="post" onsubmit="return ValidateForm(this);">
+<form action="Customer.php" id="SignUp" method="post" onsubmit="return ValidateForm(this);">
 <script type="text/javascript">
     function ValidateForm(frm) {
         if (frm.FirstName.value == "") { alert('First Name is required.'); frm.FirstName.focus(); return false; }
@@ -42,6 +42,16 @@
 <label>Last Name*:</label>
 </td> <td>
 <input name="LastName" type="text" maxlength="60" style="width: 146px;"/>
+</td> </tr>
+tr> <td>
+<label>User-name:</label>
+</td> <td>
+<input name="Username" type="text" maxlength="60" style="width: 146px;" />
+</td> </tr>
+tr> <td>
+<label>Password:</label>
+</td> <td>
+<input name="Password" type="text" maxlength="60" style="width: 146px;" />
 </td> </tr>
 <tr> <td>
 <label>Email address*:</label>
