@@ -99,6 +99,35 @@
       <div class="overlay-content">       
         <img src="res/bmi_calculator_icon.png" alt="BMI Calc"/>
         <h1>BMI Calculator</h1>
+        <form action="" onsubmit="" id="bmiForm" method="POST">
+         <!--  <p>
+            Weight: <input type="text" name="title" size="50%" maxlength="25"/>
+          </p> -->
+
+          <table class="app-table">
+            <tr>  
+              <th>Height:</th>
+            </tr>
+            <tr>
+              <td>Feet: <input type="number" name="height-feet" size="50%" maxlength="2"/></td>
+              <td>Inches: <input type="number" name="height-inches" size="50%" maxlength="2"/></td>
+            </tr>
+
+            <tr>
+              <th>Weight:</th>
+            </tr>
+            <tr>
+              <td><input type="number" name="title" size="50%" maxlength="3"/></td>
+            </tr>
+          </table>
+          
+          <!--A submit button and a reset button. The submit button submits all the input data.
+          The reset button clears all text fields and initializes everything back to the default state.-->
+          <p class="submission-area">
+            <input class="round_button" type="button" value="Calculate"/>
+            <input class="round_button" type="reset" value="Reset"/>       
+          </p>
+        </form> 
       </div>
 
     </div>
