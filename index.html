@@ -22,18 +22,24 @@
         <img src="res/diet_tracker_chicklet.png" alt="Diet Tracker"/>
         <h1>Diet Tracker</h1>
         <form action="" onsubmit="" id="dietTrackerForm" method="POST">
-          <p>
-            Foods: <input type="text" name="title" size="25" maxlength="25"/>
-            Calories: <input type="text" name="title" size="25" maxlength="25"/>
-          </p>
+          <table class="app-table">
+            <tr>
+              <td>Foods: <input type="text" name="title" size="75%" maxlength="255"/></td>
+              <td>Caloric Intake Total: <input type="text" name="title" size="25%" maxlength="25"/></td>
+            </tr>
+          </table>
+          <!-- <p>
+            Foods: <input type="text" name="title" size="50" maxlength="255"/>
+            Caloric Intake Total: <input type="text" name="title" size="25" maxlength="25"/>
+          </p> -->
 
            <p>
-            Physical: <input type="text" name="title" size="25" maxlength="25"/>
+            Physical Activities: <input type="text" name="title" size="100%" maxlength="25"/>
           </p>
 
           <!--A submit button and a reset button. The submit button submits all the input data.
           The reset button clears all text fields and initializes everything back to the default state.-->
-          <p>
+          <p class="submission-area">
             <input class="round_button" type="submit" value="Submit"/>
             <input class="round_button" type="reset" value="Reset"/>       
           </p>
@@ -123,7 +129,7 @@
         </div>      
 
         <div class="favorites">
-            <h1>Favorites</h1>
+            <h1>Applications</h1>
 
             <div class="scrollable">
                 <table>
@@ -155,10 +161,7 @@
                         </td>
 
                         <td class="favorite-item">
-                            <div class="tooltip">
-                                <img class="add_favorite" src="res/add_button.png" onclick="openNav('AddFavNav')" alt="Add Favorite"/>
-                                <span class="tooltip-text"> Add a Favorite </span>
-                            </div>
+                            
                         </td>
                     </tr>
                 </table>
