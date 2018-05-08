@@ -9,6 +9,9 @@ function closeNav(id) {
 }
 
 function calculateBMI(){
+  var heightFeet = document.getElementById("heightFeet").value;
+  var heightInches = document.getElementById("heightInches").value;
+  var weightPounds = document.getElementById("weightPounds").value;
 	$('.odometer').html(123.12);
 }
 
