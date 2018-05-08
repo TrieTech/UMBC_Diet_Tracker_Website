@@ -8,6 +8,14 @@ function closeNav(id) {
     document.getElementById(id).style.height = "0%";
 }
 
+function calculateBMI(){
+	$('.odometer').html(123.12);
+}
+
+function clearBMICalculation(){
+	$('.odometer').html(0);	
+}
+
 /* JQuery to populate the food search box in the diet tracker app*/
 $(document).ready(function(){
  $.ajaxSetup({ cache: false });

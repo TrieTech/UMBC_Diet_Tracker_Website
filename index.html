@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_style.css" />
+    <link rel="stylesheet" href="./css/external/odometer-theme-train-station.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/external/odometer.js"></script>
     <script type="text/javascript" src="./js/DTbehavior.js"></script>
 </head>
 
@@ -112,23 +114,28 @@
               <th>Height:</th>
             </tr>
             <tr>
-              <td>Feet: <input type="text" name="height-feet" size="50%" maxlength="2"/></td>
-              <td>Inches: <input type="text" name="height-inches" size="50%" maxlength="2"/></td>
+              <td>Feet: <input class="form-control" type="text" name="height-feet" size="50%" maxlength="2"/></td>
+              <td>Inches: <input class="form-control" type="text" name="height-inches" size="50%" maxlength="2"/></td>
             </tr>
 
             <tr>
               <th>Weight:</th>
             </tr>
             <tr>
-              <td>Pounds: <input type="text" name="title" size="50%" maxlength="3"/></td>
+              <td>Pounds: <input class="form-control" type="text" name="title" size="50%" maxlength="3"/></td>
             </tr>
           </table>
+
+          <div class="odometer-container">
+            <h3>Your BMI</h3>
+            <div class="odometer">0</div>
+          </div>
           
           <!--A submit button and a reset button. The submit button submits all the input data.
           The reset button clears all text fields and initializes everything back to the default state.-->
           <p class="submission-area">
-            <input class="round_button" type="button" value="Calculate"/>
-            <input class="round_button" type="reset" value="Reset"/>       
+            <input class="round_button" type="button" value="Calculate" onclick="calculateBMI()" />
+            <input class="round_button" type="reset" value="Reset" onclick="clearBMICalculation()" />       
           </p>
         </form> 
       </div>
