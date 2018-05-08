@@ -21,7 +21,7 @@
       <div class="overlay-content">
         <img src="res/diet_tracker_chicklet.png" alt="Diet Tracker"/>
         <h1>Diet Tracker</h1>
-        <form action="" onsubmit="" id="dietTrackerForm" method="POST">
+        <form action="" onsubmit="" id="dietTrackerForm" method="post">
           <table class="app-table">
             <tr>
               <td>Foods: <input type="text" name="title" size="75%" maxlength="255"/></td>
@@ -81,11 +81,13 @@
 
       <!-- Overlay content -->
       <div class="overlay-content">
-        <img src="res/maps_icon.png" alt="maps"/>
-        <h1>Maps</h1>
-        <p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.0459394830386!2d-76.71316378435398!3d39.25561703335346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81db59abc4bcb%3A0x7119b4daadb403d!2sUniversity+of+Maryland+-+Baltimore+County!5e1!3m2!1sen!2sus!4v1525710721890" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </p>        
+        <!-- <img src="res/maps_icon.png" alt="maps"/> -->
+        <h1>Maps</h1>        
+
+         <object width="100%" height="800px">
+            <param name="movie" value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.0459394830386!2d-76.71316378435398!3d39.25561703335346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81db59abc4bcb%3A0x7119b4daadb403d!2sUniversity+of+Maryland+-+Baltimore+County!5e1!3m2!1sen!2sus!4v1525710721890"></param>
+            <param name="allowFullScreen" value="true"></param>
+         </object>
       </div>
 
     </div>
@@ -99,7 +101,7 @@
       <div class="overlay-content">       
         <img src="res/bmi_calculator_icon.png" alt="BMI Calc"/>
         <h1>BMI Calculator</h1>
-        <form action="" onsubmit="" id="bmiForm" method="POST">
+        <form action="" onsubmit="" id="bmiForm" method="post">
          <!--  <p>
             Weight: <input type="text" name="title" size="50%" maxlength="25"/>
           </p> -->
@@ -109,15 +111,15 @@
               <th>Height:</th>
             </tr>
             <tr>
-              <td>Feet: <input type="number" name="height-feet" size="50%" maxlength="2"/></td>
-              <td>Inches: <input type="number" name="height-inches" size="50%" maxlength="2"/></td>
+              <td>Feet: <input type="text" name="height-feet" size="50%" maxlength="2"/></td>
+              <td>Inches: <input type="text" name="height-inches" size="50%" maxlength="2"/></td>
             </tr>
 
             <tr>
               <th>Weight:</th>
             </tr>
             <tr>
-              <td><input type="number" name="title" size="50%" maxlength="3"/></td>
+              <td>Pounds: <input type="text" name="title" size="50%" maxlength="3"/></td>
             </tr>
           </table>
           
