@@ -399,12 +399,13 @@ color: blue;
     font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
+/*Adjust hight to make a scrollbar appear when the widgets go off screen (450px)*/
+@media screen and (max-height: 1000px) {
   .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
-    top: 15px;
+    /*top: 15px;*/
     right: 35px;
   }
 }
