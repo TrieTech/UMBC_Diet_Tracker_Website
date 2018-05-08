@@ -11,19 +11,15 @@
 	$cust_weight = $_POST['Weight'];
 	$cust_height = $_POST['Height'];
 	$cust_calories = $_POST ['Calories'];
+	$cust_activity = $_POST['Activity'];
+	
 
 	
 
 
-
-
-	#construct a query
-	#query should look like this: 
-	
-	#"select * from cars where car_name='accord';"
 	
 
-	$constructed_query = "Insert INTO Diet (cust_DOB, cust_weight, cust_height ,cust_calories) VALUES ('$cust_DOB', '$cust_weight','$cust_height','$cust_calories')";
+	$constructed_query = "Insert INTO Diet (cust_DOB, cust_weight, cust_height ,cust_calories,cust_physactivity) VALUES ('$cust_DOB', '$cust_weight','$cust_height','$cust_calories','$cust_activity')";
 						  
 	
 	$result = mysqli_query($db, $constructed_query);
