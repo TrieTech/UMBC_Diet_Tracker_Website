@@ -456,3 +456,8 @@ p.submission-area{
 .link-class:hover{
  background-color:#f1f1f1;
 }
+
+img.overlay-chicklet{
+  width: 100px;
+  height: 100px;
+}
