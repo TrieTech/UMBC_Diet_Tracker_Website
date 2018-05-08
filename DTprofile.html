@@ -4,11 +4,77 @@
 
 <head>
     <title>UMBC Diet Tracker</title>
+    <script src="/lib/jquery.min.js"></script>
+    <script src="/lib/jquery.plugin.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_profile.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_progress.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_style.css" />
+    <style >
+        <style>
+     #circ-cont {
+                display: block;
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+                border-radius: 100%;
+                position: relative;
+                margin-top: 30px;
+                transition: all 0.3s ease-out;
+
+                #svg {
+                    transform: rotate(-90deg);
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    position: absolute;
+                    
+                    circle {
+                        stroke-dashoffset: 0;
+                        stroke: #ebebeb;
+                        stroke-width: 15px;
+
+                    }
+
+                    #bar {
+                        stroke: #ebebeb;
+                        stroke-width: 15px;
+                    }
+                }
+                
+                .shadow {
+                    position: absolute;
+                    top: 175px;
+                    left: 0;
+                    right: 10px;
+                    margin: auto;
+                    opacity: 0.8;
+                    
+                }
+                
+                .section {
+                    text-transform: uppercase;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    text-align: center;
+                    bottom: 70px;
+                    font-size: 18px;
+                    font-family: Arial, sans-serif;
+                    
+                }
+                
+            }
+
+    </style>
+    </style>
 </head>
+
 
 <body>
     <!--This page will describe who I am and Student role at UMBC -->
@@ -40,7 +106,11 @@
 
             <h2>Diet Tracking Progress</h2>
             <p><label>Daily Progress</label></p>
-            <div class="loader"></div>
+            <div id="circ-cont" data-pct="100">
+                <svg id="svg" width="300" height="300" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="120" cx="150" cy="150" fill="transparent" stroke-dashoffset="0"></circle>
+                    <circle id="bar" r="120" cx="150" cy="150" fill="transparent" stroke-dasharray="753.98"  stroke-dashoffset="0" style="stroke:#E85151"></circle>
+                </svg>
             <p><label>Weekly Progress</label></p>
             <div class="loader"></div>
             <p><label>Overall Progress</label></p>
@@ -69,6 +139,32 @@
             </div>
         </div>
     </div>
+    <script>
+        var val = 70;
+    var $circle = $('#svg #bar');
+
+
+var radius = $circle.attr('r');
+var circumference = Math.PI*(radius*2);
+
+$circle.css({ strokeDashoffset: circumference});
+
+var pct = (val/100)*circumference;
+
+var obj = {
+  pct: 0
+};
+
+TweenLite.to(obj, .7, {
+  pct: -pct,
+  delay: 1,
+  onUpdate: function () {
+    $circle.css({ strokeDashoffset: obj.pct-circumference});
+  }
+});
+        
+
+    </script>
 
 </body>
 </html>
