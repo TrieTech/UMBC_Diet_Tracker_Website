@@ -30,6 +30,6 @@ $(document).ready(function(){
   var click_text = $(this).text().split('|');
   $('#foodSearch').val($.trim(click_text[0]));
   $("#foodSearchResults").html('');
-  $("#calor").val($.trim(click_text[1]));
+  $("#calor").val($.trim(click_text[1].split(":")[1]));
  });
 });
