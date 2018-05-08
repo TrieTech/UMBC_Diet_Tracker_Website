@@ -29,16 +29,28 @@
         <form action="" onsubmit="" id="dietTrackerForm" method="post">
           <table class="app-table">
             <tr>
-              <td>Search Food Details: <input class="form-control" type="text" name="food-search" id="foodSearch"/></td>
-              <td>Calories: <input class="form-control" type="text" name="calor" id="calor"/></td>
+              <td>Search Food Details: <input class="form-control" type="text" name="food-search" id="foodSearch" size="50%"/></td>
+              <td>Calories: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
             </tr>
           </table>
 
           <ul class="list-group" id="foodSearchResults"></ul>
 
-           <p>
-            Physical Activities: <input class="form-control" type="text" name="title" size="100%" maxlength="25"/>
-          </p>
+           <div>
+            <!-- Physical Activities:  -->
+            <!-- <input class="form-control" type="text" name="title" size="100%" maxlength="25"/> -->
+            <label> Physical Activity:
+              <select class="form-control" name="physical-activities">
+                <option>[None]</option>
+                <option>Walking</option>
+                <option>Jogging</option>
+                <option>Running</option>
+                <option>Swimming</option>
+                <option>Plyometrics</option>
+                <option>Lifting</option>
+              </select>
+            </label>
+          </div>
 
           <!--A submit button and a reset button. The submit button submits all the input data.
           The reset button clears all text fields and initializes everything back to the default state.-->
