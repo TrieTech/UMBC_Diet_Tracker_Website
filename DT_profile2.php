@@ -1,8 +1,8 @@
 <?php
-require_once('connection.php');
+require_once('connect.php');
 $id=$_SESSION['SESS_MEMBER_ID'];
-$result3 = mysql_query("SELECT * FROM member where mem_id='$id'");
-while($row3 = mysql_fetch_array($result3))
+$result3 = mysqli_query("SELECT * FROM Customer where customer_id ='$id'");
+while($row3 = mysqli_fetch_array($result3))
 { 
 $fname=$row3['fname'];
 $lname=$row3['lname'];
@@ -15,7 +15,7 @@ $gender=$row3['gender'];
 <table width="398" border="0" align="center" cellpadding="0">
   <tr>
     <td height="26" colspan="2">Your Profile Information </td>
-	<td><div align="right"><a href="index.php">logout</a></div></td>
+  <td><div align="right"><a href="index.php">logout</a></div></td>
   </tr>
   <tr>
     <td width="129" rowspan="5"><img src="<?php echo $picture ?>" width="129" height="129" alt="no image found"/></td>
