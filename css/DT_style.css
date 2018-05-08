@@ -441,7 +441,7 @@ p.submission-area{
   text-align: center;
 }
 
-#result {
+#foodSearchResults {
    position: absolute;
    width: 100%;
    max-width:870px;
@@ -450,7 +450,9 @@ p.submission-area{
    max-height: 400px;
    box-sizing: border-box;
    z-index: 1001;
+   color: black;
   }
+
 .link-class:hover{
  background-color:#f1f1f1;
 }

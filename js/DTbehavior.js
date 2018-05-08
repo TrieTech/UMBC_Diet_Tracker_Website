@@ -16,7 +16,7 @@ $(document).ready(function(){
   $('#state').val('');
   var searchField = $('#foodSearch').val();
   var expression = new RegExp(searchField, "i");
-  $.getJSON('./../food.json', function(data) {
+  $.getJSON('./food.json', function(data) {
    $.each(data, function(key, value){
     if (value.Display_Name.search(expression) != -1 || value.Calories.search(expression) != -1)
     {
