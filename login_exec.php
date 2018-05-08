@@ -54,19 +54,19 @@
 			session_regenerate_id();
 			$member = mysqli_fetch_assoc($result);
 			$_SESSION['SESS_MEMBER_ID'] = $member['cust_ID'];
-			$_SESSION['SESS_FIRST_NAME'] = $member['Username'];
-			$_SESSION['SESS_LAST_NAME'] = $member['Password'];
+			$_SESSION['SESS_FIRST_NAME'] = $member['cust_sername'];
+			$_SESSION['SESS_LAST_NAME'] = $member['cust_assword'];
 			session_write_close();
 			header("location: home.php");
 			exit();
-		}else {
+		}else if(mysqli_num_rows($result) == 0) {
 			//Login failed
 			$errmsg_arr[] = 'user name and password not found';
 			$errflag = true;
 			if($errflag) {
 				$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 				session_write_close();
-				header("location: index.html");
+				header("location: home.php");
 				exit();
 			}
 		}
