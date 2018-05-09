@@ -7,6 +7,7 @@
 
 <head>
     <title>UMBC Diet Tracker</title>
+    <script type = "text/javascript"  src = "food_asynch.js" ></script>
     <script src="/lib/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="/lib/jquery.plugin.js"></script>
@@ -96,16 +97,18 @@
             </ul>
         </div>
 
+    <form method ="post" action="">
         <div class="prof-container">
-            <h2>Welcome <?php echo $login_session; ?> !<h2>
+            <h2>Welcome <?php echo $login_session; ?> !</h2>
 
             <img src="./res/blank-profile-picture-973460_960_720.png" alt="personal image" style="width: 300px; height: 335px;" />
-            <p>"Living Life"</p>
+            <p><input style="border: none;outline: none;background-color: transparent;font-family: inherit; font-size: inherit;" type="text" name="quote" id="quote" placeholder="Living Life" onkeyup="showResult(this.value)"></p>
+            <p><div id="typearea"></div></p>
             <p><img class="headericon" src="./res/open-letter.png" alt="email image" />&nbsp;&nbsp;<?php echo $login_email; ?></p>
 
-            <p><img class="headericon" src="./res/briefcase.png" alt="work img" />&nbsp;&nbsp;Student</p>
+            <p><img class="headericon" src="./res/briefcase.png" alt="work img" />&nbsp;&nbsp;<?php echo $login_occupation; ?></p>
 
-            <p><img class="headericon" src="./res/map.png" alt="map image" />&nbsp;&nbsp;Bethesda, MD</p>
+            <p><img class="headericon" src="./res/map.png" alt="map image" />&nbsp;&nbsp; <?php echo $login_city;?> <?php echo $login_state ?></p>
 
             <h2>Diet Tracking Progress</h2>
             <p><label>Daily Progress</label></p>
@@ -130,6 +133,8 @@
                 </svg>
             </div>
         </div>
+    </form>
+
 
 
         <div class="footer">Copyright &copy;&nbsp;AlphaTech.com

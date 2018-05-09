@@ -34,6 +34,7 @@
 						  
 	
 	$result = mysqli_query($db, $constructed_query);
+
 	
 
 
@@ -44,7 +45,7 @@
 		print "<p> . $error . </p>";
 		exit;
 	}
-header('Location: index.html');
+header('Location: DTlogin.php');
 exit;
 
 	?>
