@@ -107,5 +107,5 @@ var quickLinks = ["DTcontactus.html", "DTaboutus.html", "DTtermsofuse.html", "ht
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 window.onload=function(){
-  autocomplete(document.getElementById("myInput"), linkNames);
+  autocomplete(document.getElementById("DTsearch"), linkNames);
 }
