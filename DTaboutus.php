@@ -24,7 +24,11 @@
                 <li><a href="DTcontactus.php" title="contact us page">Contact Us</a></li>
                 <li><a href="DTaboutus.php" title="About us page">About Us</a></li>
                 <li><a href ="logout.php">Sign Out</a></li>
-                <li class="float-right"><input class="search" type="text" name="search"/></li>
+                <li class="float-right">
+                    <div class="autocomplete">
+                      <input id="DTsearch" class="search" type="text" name="search" />  
+                    </div>                  
+                  </li>
             </ul>
         </div>
         <h2>About Us</h2>
