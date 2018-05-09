@@ -495,3 +495,11 @@ img.overlay-chicklet{
   background-color: DodgerBlue !important; 
   color: #ffffff; 
 }
+
+.activity-distribution-container{
+  display: grid;
+}
+
+table.activity-distribution{  
+  border-spacing: 10px;
+}
