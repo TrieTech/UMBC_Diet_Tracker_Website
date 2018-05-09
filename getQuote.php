@@ -1,14 +1,13 @@
 <?php
 header("Cache-Control: no-cache, must-revalidate");
- // Date in the past
-header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 
 // Fill up array with names
 $a[]="What doesn't Kill you makes you stronger";
 $a[]="Happy and proud";
 $a[]="Feeling the Burn";
 $a[]="Ain't nobody gonna stop me!";
-$a[]="I am person, hear me roar!";
+$a[]="I am person, hear me roar!"; 
+$a[]="Only I can change my life. No one can do it for me.";
 
 
 //get the q parameter from URL
