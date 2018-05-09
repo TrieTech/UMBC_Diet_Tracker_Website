@@ -24,26 +24,33 @@
                 <li class="float-right"><input class="search" type="text" name="search" /></li>
             </ul>
         </div>
-        <div class="logcontainer">
-            <h1>Your Diet Tracker Profile</h1>
-            <form class="login" method="post" action="login_exec.php">
-                <p> Username : <input class="login" type="text" name="login" value="" /></p>
-                <p> Password: <input class="login" type="password" name="password" value="" /></p>
-                <p class="remember_me">
-                    <label>
-            <input type="checkbox" name="remember_me" id="remember_me"/>
+        <section class="logcontainer">
+    <div class="login">
+      <h1>Your Diet Tracker Profile</h1>
+      <form method="post" action="">
+        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" value="" placeholder="Password"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
             Remember me on this computer
           </label>
-                </p>
-                <p class="submit"><input type="submit" name="commit" value="Login" /></p>
-                
-				
-            </form>
-			
-			<form class="login" method="post" action="DTsignupPage.html">
-					<p class="submit"><input type="submit" name="register" value="Sign up" /></p>
-			</form>
-        </div>
+        </p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      </form>
+    </div>
+
+    <div class="login-help">
+      <p>Forgot your password? <a href="DTlogin.html">Click here to reset it</a>.</p>
+      <div class="text-center p-t-136">
+            <a class="txt2" href="DTsignupPage.html">
+              Create your Account
+              <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+            </a>
+          </div>
+    </div>
+
+  </section>
 
 
         <div class="footer">Copyright &copy;&nbsp;AlphaTech.com
