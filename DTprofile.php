@@ -22,18 +22,19 @@
 
         <div id="nav">
             <ul>
+                <li><a href="DTprofile.php" title="Signed In"><?php echo $login_session; ?></a></li>
                 <li><a href="index.html" title="homepage">Home</a></li>
-                <li><a href="DTlogin.html" title="login page">Sign In/Join</a></li>
                 <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
                 <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
-                <li class="float-right"><input class="search" type="text" name="search" /></li>
+                <li><a href ="logout.php">Sign Out</a></li>
+                <li class="float-right"><input class="search" type="text" name="search"/></li>
             </ul>
         </div>
 
         <div class="prof-container">
             <h2>Welcome <?php echo $login_session; ?> !<h2>
 
-            <img src="./res/22246554.jpg" alt="personal image" style="width: 100%; height: 235px;" />
+            <img src="./res/blank-profile-picture-973460_960_720.png" alt="personal image" style="width: 300px; height: 335px;" />
             <p>"Living Life"</p>
             <p><img class="headericon" src="./res/open-letter.png" alt="email image" />&nbsp;&nbsp;<?php echo $login_email; ?></p>
 
@@ -43,7 +44,11 @@
 
             <h2>Diet Tracking Progress</h2>
             <p><label>Daily Progress</label></p>
-            <div class="loader"></div>
+            <div id="circ-cont" data-pct="100">
+                <svg id="svg" width="300" height="300" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="120" cx="150" cy="150" fill="transparent" stroke-dashoffset="0"></circle>
+                    <circle id="bar" r="120" cx="150" cy="150" fill="transparent" stroke-dasharray="753.98"  stroke-dashoffset="0" style="stroke:#E85151"></circle>
+                </svg>
             <p><label>Weekly Progress</label></p>
             <div class="loader"></div>
             <p><label>Overall Progress</label></p>
@@ -72,16 +77,31 @@
             </div>
         </div>
     </div>
+    <script>
+        var val = 70;
+    var $circle = $('#svg #bar');
 
-<html">
-   
-   <head>
-      <title>Welcome </title>
-   </head>
-   
-   <body>
-      <h1>Welcome <?php echo $login_session; ?></h1> 
-      <h2><a href = "logout.php">Sign Out</a></h2>
-   </body>
-   
+
+var radius = $circle.attr('r');
+var circumference = Math.PI*(radius*2);
+
+$circle.css({ strokeDashoffset: circumference});
+
+var pct = (val/100)*circumference;
+
+var obj = {
+  pct: 0
+};
+
+TweenLite.to(obj, .7, {
+  pct: -pct,
+  delay: 1,
+  onUpdate: function () {
+    $circle.css({ strokeDashoffset: obj.pct-circumference});
+  }
+});
+        
+
+    </script>
+</body>
 </html>

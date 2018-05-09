@@ -10,6 +10,7 @@
    
    $login_session = $row['cust_username'];
    $login_email = $row['cust_email'];
+$login_fname = $row['cust_name'];
    
    if(!isset($_SESSION['login_user'])){
       header("location:login.php");
