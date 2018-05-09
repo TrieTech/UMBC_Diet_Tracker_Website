@@ -65,6 +65,7 @@ $(document).ready(function(){
  $('#foodSearchResults').on('click', 'li', function() {
   var click_text = $(this).text().split('|');
   var displayName = $.trim(click_text[0]);
+  showNutritionStats()
   $('#foodSearch').val(displayName);
   $("#foodSearchResults").html('');
 
