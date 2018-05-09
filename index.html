@@ -56,49 +56,8 @@
             "Saturated_Fats": "7.36898" -->
 
             <tr>
-              <td>Search Food Details: <input class="form-control" type="text" name="food-search" id="foodSearch" size="50%"/></td>
-              <td>Calories: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>
-             <!-- <tr>
-              <td>Portion_Default: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Portion_Amount: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Grains: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Whole_Grains: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Vegetables: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Orange_Vegetables: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Drkgreen_Vegetables: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Starchy_vegetables: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Other_Vegetables: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Fruits: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Milk: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Meats: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Soy: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Drybeans_Peas: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Oils: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Solid_Fats: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Added_Sugars: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Alcohol: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>            
-            <tr>
-              <td>Calories: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-              <td>Saturated_Fats: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
-            </tr>  -->
+              <td>Search Food Details: <input class="form-control" type="text" name="food-search" id="foodSearch" size="100%"/></td>              
+            </tr>             
           </table>
 
           <ul class="list-group" id="foodSearchResults"></ul>
@@ -106,9 +65,52 @@
           <!--A submit button and a reset button. The submit button submits all the input data.
           The reset button clears all text fields and initializes everything back to the default state.-->
           <p class="submission-area">
-            <!-- <input class="round_button" type="button" value="Get Stats"/> -->
-            <input class="round_button" type="reset" value="Clear"/>       
+            <input class="round_button" type="button" value="Get Stats" onclick="showNutritionStats()" />
+            <input class="round_button" type="reset" value="Clear" onclick="hideNutritionStats()" />       
           </p>
+
+          <table id="nutritionFacts" class="nutrition-facts">
+            <tr>
+              <td>Calories: <input class="form-control" type="text" name="calor" id="calor" size="50%"/></td>
+              <td>Portion Amount: <input class="form-control" type="text" name="Portion_Amount" id="Portion_Amount" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Grains: <input class="form-control" type="text" name="Grains" id="Grains" size="50%"/></td>
+              <td>Whole Grains: <input class="form-control" type="text" name="Whole_Grains" id="Whole_Grains" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Vegetables: <input class="form-control" type="text" name="Vegetables" id="Vegetables" size="50%"/></td>
+              <td>Orange Vegetables: <input class="form-control" type="text" name="Orange_Vegetables" id="Orange_Vegetables" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Drkgreen Vegetables: <input class="form-control" type="text" name="Drkgreen_Vegetables" id="Drkgreen_Vegetables" size="50%"/></td>
+              <td>Starchy Vegetables: <input class="form-control" type="text" name="Starchy_vegetables" id="Starchy_vegetables" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Other Vegetables: <input class="form-control" type="text" name="Other_Vegetables" id="Other_Vegetables" size="50%"/></td>
+              <td>Fruits: <input class="form-control" type="text" name="Fruits" id="Fruits" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Milk: <input class="form-control" type="text" name="Milk" id="Milk" size="50%"/></td>
+              <td>Meats: <input class="form-control" type="text" name="Meats" id="Meats" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Soy: <input class="form-control" type="text" name="Soy" id="Soy" size="50%"/></td>
+              <td>Drybeans Peas: <input class="form-control" type="text" name="Drybeans_Peas" id="Drybeans_Peas" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Oils: <input class="form-control" type="text" name="Oils" id="Oils" size="50%"/></td>
+              <td>Solid Fats: <input class="form-control" type="text" name="Solid_Fats" id="Solid_Fats" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Added Sugars: <input class="form-control" type="text" name="Added_Sugars" id="Added_Sugars" size="50%"/></td>
+              <td>Alcohol: <input class="form-control" type="text" name="Alcohol" id="Alcohol" size="50%"/></td>
+            </tr>            
+            <tr>
+              <td>Saturated Fats: <input class="form-control" type="text" name="Saturated_Fats" id="Saturated_Fats" size="50%"/></td>
+              <td></td>
+            </tr> 
+          </table>
         </form> 
       </div>
 
