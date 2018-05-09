@@ -22,7 +22,7 @@
 
         <div id="nav">
             <ul>
-                <li><a href="DTprofile.php" title="Signed In"><?php echo $login_session; ?></a></li>
+                <li><a href="DTprofile.php" title="Signed In"><?php echo $login_fname; ?></a></li>
                 <li><a href="index.html" title="homepage">Home</a></li>
                 <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
                 <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
