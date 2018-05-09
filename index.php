@@ -39,8 +39,7 @@
 
           <ul class="list-group" id="foodSearchResults"></ul>
 
-          <!--A submit button and a reset button. The submit button submits all the input data.
-          The reset button clears all text fields and initializes everything back to the default state.-->
+          <!--A clear button. The clear button initializes everything back to the default state.-->
           <p class="submission-area">            
             <input class="round_button" type="reset" value="Clear" onclick="hideNutritionStats()" />       
           </p>
@@ -116,7 +115,90 @@
              Extra active (very hard exercise/sports & physical job or 2x training): BMR x 1.9
           3. Your final number is the approximate number of calories you need each day to maintain your weight. -->
 
-        
+        <form action="" onsubmit="" id="bmrCalculatorForm" method="post">
+          <label> Gender:
+            <select class="form-control" id="genderBMR">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </label>
+
+          <table class="app-table">
+            <tr>  
+              <th>Date of Birth:</th>
+            </tr>
+            <tr>
+              <td><input class="form-control" type="date" name="dob" id="dobBMR" size="50%"/></td>
+              <td></td>
+            </tr>
+            <tr>  
+              <th>Height:</th>
+            </tr>
+            <tr>
+              <td>Feet: <input class="form-control" type="text" name="height-feet" id="heightFeetBMR" size="50%" maxlength="2"/></td>
+              <td>Inches: <input class="form-control" type="text" name="height-inches" id="heightInchesBMR" size="50%" maxlength="2"/></td>
+            </tr>
+
+            <tr>
+              <th>Weight:</th>
+            </tr>
+            <tr>
+              <td>Pounds: <input class="form-control" type="text" name="weight-pounds" id="weightPoundsBMR" size="50%" maxlength="3"/></td>
+            </tr>
+          </table>
+
+          <div class="odometer-container">
+            <h3>Your BMR</h3>
+            <div class="odometer">0</div>
+          </div>
+
+          <div class="activity-distribution-container">
+            <table class="activity-distribution">
+              <tr>
+                <th>Activity Distribution:</th>
+              </tr>
+              <tr>
+                <th>Light Activity</th>
+                <th>Moderate Activity</th>
+                <th>High Activity</th>
+                <th>Extreme Activity</th>
+              </tr>
+              <tr>
+                <td id="lightActivity"></td>
+                <td id="moderateActivity"></td>
+                <td id="highActivity"></td>
+                <td id="extremeActivity"></td>
+              </tr>
+            </table>
+
+            <table class="activity-distribution-key">
+              <tr>
+                <th>Activity Distribution Key:</th>
+              </tr>
+              <tr>
+                <td>Light Activity</td>
+                <td>Light exercise/sports 1-3 days/week</td>
+              </tr>
+              <tr>
+                <td>Moderate Activity</td>
+                <td>Moderate exercise/sports 3-5 days/week</td>
+              </tr>
+              <tr>
+                <td>High Activity</td>
+                <td>Hard exercise/sports 6-7 days a week</td>
+              </tr>
+              <tr>
+                <td>Extreme Activity</td>
+                <td>Very hard exercise/sports & physical job or 2x training</td>
+              </tr>
+            </table>
+          </div>
+
+          <p class="submission-area">            
+            <input class="round_button" type="button" value="Calculate" onclick="calculateBMR()" />       
+            <input class="round_button" type="reset" value="Clear" onclick="clearBMRCalculation()" />       
+          </p>
+        </form> 
       </div>
 
     </div>
@@ -167,15 +249,15 @@
               <th>Height:</th>
             </tr>
             <tr>
-              <td>Feet: <input class="form-control" type="text" name="height-feet" id="heightFeet" size="50%" maxlength="2"/></td>
-              <td>Inches: <input class="form-control" type="text" name="height-inches" id="heightInches" size="50%" maxlength="2"/></td>
+              <td>Feet: <input class="form-control" type="text" name="height-feet" id="heightFeetBMI" size="50%" maxlength="2"/></td>
+              <td>Inches: <input class="form-control" type="text" name="height-inches" id="heightInchesBMI" size="50%" maxlength="2"/></td>
             </tr>
 
             <tr>
               <th>Weight:</th>
             </tr>
             <tr>
-              <td>Pounds: <input class="form-control" type="text" name="weight-pounds" id="weightPounds" size="50%" maxlength="3"/></td>
+              <td>Pounds: <input class="form-control" type="text" name="weight-pounds" id="weightPoundsBMI" size="50%" maxlength="3"/></td>
             </tr>
           </table>
 
@@ -214,14 +296,17 @@
         </div>
 
         <div id="nav">
-            <ul>
-                <li><a href="DTprofile.php" title="Signed In">Hi, <?php echo $login_fname; ?></a></li>
-                <li><a href="index.php" title="homepage">Home</a></li>
-                <li><a href="DTcontactus.php" title="contact us page">Contact Us</a></li>
-                <li><a href="DTaboutus.php" title="About us page">About Us</a></li>
-                <li><a href ="logout.php">Sign Out</a></li>
-                <li class="float-right"><input class="search" type="text" name="search"/></li>
-            </ul>
+          <ul>
+              <li><a class="active" href="index.html" title="homepage">Home</a></li>
+              <li><a href="DTlogin.php" title="login page">Sign In/Join</a></li>
+              <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
+              <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
+              <li class="float-right">
+                <div class="autocomplete">
+                  <input id="DTsearch" class="search" type="text" name="search" />  
+                </div>                  
+              </li>
+          </ul>
         </div>      
 
         <div class="favorites">
@@ -241,20 +326,20 @@
                         </td>
 
                         <td class="favorite-item">
-                            <img src="res/food_plan_icon.png" onclick="openNav('FoodPlanNav')" alt="Food Plan"/>
-                            <span class="caption">Food Plan</span>
+                            <img src="res/bmi_calculator_icon.png" onclick="openNav('BMICalcNav')" alt="BMI Calc"/>
+                            <span class="caption">BMI Calculator</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="favorite-item">
-                            <img src="res/bmi_calculator_icon.png" onclick="openNav('BMICalcNav')" alt="BMI Calc"/>
-                            <span class="caption">BMI Calculator</span>
-                        </td>
-
-                        <td class="favorite-item">
                             <img src="res/maps_icon.png" onclick="openNav('MapsNav')" alt="maps"/>
                             <span class="caption">Maps</span>
                         </td>
+
+                        <!-- <td class="favorite-item">
+                            <img src="res/food_plan_icon.png" onclick="openNav('FoodPlanNav')" alt="Food Plan"/>
+                            <span class="caption">Food Plan</span>
+                        </td> -->
 
                         <td class="favorite-item">
                             
