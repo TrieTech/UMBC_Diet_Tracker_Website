@@ -399,12 +399,13 @@ color: blue;
     font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
+/*Adjust hight to make a scrollbar appear when the widgets go off screen (450px)*/
+@media screen and (max-height: 1000px) {
   .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
-    top: 15px;
+    /*top: 15px;*/
     right: 35px;
   }
 }
@@ -438,7 +439,7 @@ table.app-table, td{
 
 p.submission-area{
   padding: 10px;
-  text-align: center;
+  text-align: right;
 }
 
 #foodSearchResults {
@@ -455,4 +456,9 @@ p.submission-area{
 
 .link-class:hover{
  background-color:#f1f1f1;
+}
+
+img.overlay-chicklet{
+  width: 100px;
+  height: 100px;
 }
