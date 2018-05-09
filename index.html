@@ -36,8 +36,7 @@
 
           <ul class="list-group" id="foodSearchResults"></ul>
 
-          <!--A submit button and a reset button. The submit button submits all the input data.
-          The reset button clears all text fields and initializes everything back to the default state.-->
+          <!--A clear button. The clear button initializes everything back to the default state.-->
           <p class="submission-area">            
             <input class="round_button" type="reset" value="Clear" onclick="hideNutritionStats()" />       
           </p>
@@ -113,7 +112,66 @@
              Extra active (very hard exercise/sports & physical job or 2x training): BMR x 1.9
           3. Your final number is the approximate number of calories you need each day to maintain your weight. -->
 
-        
+        <form action="" onsubmit="" id="bmrCalculatorForm" method="post">
+          <label> Gender:
+            <select class="form-control" id="genderBMR">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </label>
+
+          <table class="app-table">
+            <tr>  
+              <th>Date of Birth:</th>
+            </tr>
+            <tr>
+              <td><input class="form-control" type="date" name="dob" id="dobBMR" size="50%"/></td>
+              <td></td>
+            </tr>
+            <tr>  
+              <th>Height:</th>
+            </tr>
+            <tr>
+              <td>Feet: <input class="form-control" type="text" name="height-feet" id="heightFeetBMR" size="50%" maxlength="2"/></td>
+              <td>Inches: <input class="form-control" type="text" name="height-inches" id="heightInchesBMR" size="50%" maxlength="2"/></td>
+            </tr>
+
+            <tr>
+              <th>Weight:</th>
+            </tr>
+            <tr>
+              <td>Pounds: <input class="form-control" type="text" name="weight-pounds" id="weightPoundsBMR" size="50%" maxlength="3"/></td>
+            </tr>
+          </table>
+
+          <div class="odometer-container">
+            <h3>Your BMR</h3>
+            <div class="odometer">0</div>
+          </div>
+
+          <table>
+            <tr>
+              <th>Activity Distribution:</th>
+            </tr>
+            <tr>
+              <th>Light</th>
+              <th>Moderate</th>
+              <th>High</th>
+              <th>Extreme</th>
+            </tr>
+            <tr>
+              <td>999</td>
+              <td>999</td>
+              <td>999</td>
+              <td>999</td>
+            </tr>
+          </table>
+
+          <p class="submission-area">            
+            <input class="round_button" type="button" value="Calculate" onclick="calculateBMR()" />       
+            <input class="round_button" type="reset" value="Clear" onclick="clearBMRCalculation()" />       
+          </p>
+        </form> 
       </div>
 
     </div>
@@ -164,15 +222,15 @@
               <th>Height:</th>
             </tr>
             <tr>
-              <td>Feet: <input class="form-control" type="text" name="height-feet" id="heightFeet" size="50%" maxlength="2"/></td>
-              <td>Inches: <input class="form-control" type="text" name="height-inches" id="heightInches" size="50%" maxlength="2"/></td>
+              <td>Feet: <input class="form-control" type="text" name="height-feet" id="heightFeetBMI" size="50%" maxlength="2"/></td>
+              <td>Inches: <input class="form-control" type="text" name="height-inches" id="heightInchesBMI" size="50%" maxlength="2"/></td>
             </tr>
 
             <tr>
               <th>Weight:</th>
             </tr>
             <tr>
-              <td>Pounds: <input class="form-control" type="text" name="weight-pounds" id="weightPounds" size="50%" maxlength="3"/></td>
+              <td>Pounds: <input class="form-control" type="text" name="weight-pounds" id="weightPoundsBMI" size="50%" maxlength="3"/></td>
             </tr>
           </table>
 

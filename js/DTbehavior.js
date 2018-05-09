@@ -8,12 +8,69 @@ function closeNav(id) {
     document.getElementById(id).style.height = "0%";
 }
 
-function calculateBMI(){
-  	var heightFeet = parseInt(document.getElementById("heightFeet").value);
-  	var heightInches = parseInt(document.getElementById("heightInches").value);
+/* Calculate BMR based on Harris-Benedict Formula:
+  1. Calculate your BMR (basal metabolic rate):
+
+  Women: BMR = 655 + ( 4.35 x weight in pounds ) + ( 4.7 x height in inches ) - ( 4.7 x age in years )
+  Men: BMR = 66 + ( 6.23 x weight in pounds ) + ( 12.7 x height in inches ) - ( 6.8 x age in years )
+  2. Multiply your BMR by the appropriate activity factor, as follows:
+
+     Sedentary (little or no exercise): BMR x 1.2
+     Lightly active (light exercise/sports 1-3 days/week): BMR x 1.375
+     Moderately active (moderate exercise/sports 3-5 days/week): BMR x 1.55
+     Very active (hard exercise/sports 6-7 days a week): BMR x 1.725
+     Extra active (very hard exercise/sports & physical job or 2x training): BMR x 1.9
+  3. Your final number is the approximate number of calories you need each day to maintain your weight.*/
+function calculateBMR(){
+	var gender = document.getElementById("genderBMR").value;
+
+	var dob = document.getElementById("dobBMR").value;
+	var ageYears = getAge(dob);
+
+	var heightFeet = parseInt(document.getElementById("heightFeetBMR").value);
+  	var heightInches = parseInt(document.getElementById("heightInchesBMR").value);
   	var totalInches = (heightFeet * 12) + heightInches;
 
-  	var weightPounds = parseFloat(document.getElementById("weightPounds").value);
+  	var weightPounds = parseFloat(document.getElementById("weightPoundsBMR").value);
+
+  	var bmr = gender.toLowerCase() == "male" ? 66 + (((6.23 * weightPounds) + (12.7 * totalInches)) - (6.8 * ageYears)) : 655 + (((4.35 * weightPounds) + (4.7 * totalInches)) - (4.7 * ageYears));
+
+	// Lightly active (light exercise/sports 1-3 days/week): BMR x 1.375
+  	var lightActivity = bmr * 1.375;
+
+  	// Moderately active (moderate exercise/sports 3-5 days/week): BMR x 1.55
+  	var moderateActivity = bmr * 1.55;
+
+  	// Very active (hard exercise/sports 6-7 days a week): BMR x 1.725
+  	var highActivity = bmr * 1.725;
+
+  	// Extra active (very hard exercise/sports & physical job or 2x training): BMR x 1.9
+  	var extremeActivity = bmr * 1.9;
+
+  	$('.odometer').html(bmr);
+}
+
+function clearBMRCalculation(){
+	$('.odometer').html(0);
+}
+
+function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+function calculateBMI(){
+  	var heightFeet = parseInt(document.getElementById("heightFeetBMI").value);
+  	var heightInches = parseInt(document.getElementById("heightInchesBMI").value);
+  	var totalInches = (heightFeet * 12) + heightInches;
+
+  	var weightPounds = parseFloat(document.getElementById("weightPoundsBMI").value);
 
   	var bmi = 703 * (weightPounds / Math.pow(totalInches, 2));
 
