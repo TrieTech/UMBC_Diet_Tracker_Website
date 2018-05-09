@@ -149,23 +149,47 @@
             <div class="odometer">0</div>
           </div>
 
-          <table>
-            <tr>
-              <th>Activity Distribution:</th>
-            </tr>
-            <tr>
-              <th>Light</th>
-              <th>Moderate</th>
-              <th>High</th>
-              <th>Extreme</th>
-            </tr>
-            <tr>
-              <td>999</td>
-              <td>999</td>
-              <td>999</td>
-              <td>999</td>
-            </tr>
-          </table>
+          <div class="activity-distribution-container">
+            <table class="activity-distribution">
+              <tr>
+                <th>Activity Distribution:</th>
+              </tr>
+              <tr>
+                <th>Light Activity</th>
+                <th>Moderate Activity</th>
+                <th>High Activity</th>
+                <th>Extreme Activity</th>
+              </tr>
+              <tr>
+                <td id="lightActivity"></td>
+                <td id="moderateActivity"></td>
+                <td id="highActivity"></td>
+                <td id="extremeActivity"></td>
+              </tr>
+            </table>
+
+            <table class="activity-distribution-key">
+              <tr>
+                <th>Activity Distribution Key:</th>
+              </tr>
+              <tr>
+                <td>Light Activity</td>
+                <td>Light exercise/sports 1-3 days/week</td>
+              </tr>
+              <tr>
+                <td>Moderate Activity</td>
+                <td>Moderate exercise/sports 3-5 days/week</td>
+              </tr>
+              <tr>
+                <td>High Activity</td>
+                <td>Hard exercise/sports 6-7 days a week</td>
+              </tr>
+              <tr>
+                <td>Extreme Activity</td>
+                <td>Very hard exercise/sports & physical job or 2x training</td>
+              </tr>
+            </table>
+          </div>
 
           <p class="submission-area">            
             <input class="round_button" type="button" value="Calculate" onclick="calculateBMR()" />       

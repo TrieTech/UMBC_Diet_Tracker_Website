@@ -36,22 +36,29 @@ function calculateBMR(){
   	var bmr = gender.toLowerCase() == "male" ? 66 + (((6.23 * weightPounds) + (12.7 * totalInches)) - (6.8 * ageYears)) : 655 + (((4.35 * weightPounds) + (4.7 * totalInches)) - (4.7 * ageYears));
 
 	// Lightly active (light exercise/sports 1-3 days/week): BMR x 1.375
-  	var lightActivity = bmr * 1.375;
+  	var lightActivity = parseFloat((bmr * 1.375).toFixed(2));
 
   	// Moderately active (moderate exercise/sports 3-5 days/week): BMR x 1.55
-  	var moderateActivity = bmr * 1.55;
+  	var moderateActivity = parseFloat((bmr * 1.55).toFixed(2));
 
   	// Very active (hard exercise/sports 6-7 days a week): BMR x 1.725
-  	var highActivity = bmr * 1.725;
+  	var highActivity = parseFloat((bmr * 1.725).toFixed(2));
 
   	// Extra active (very hard exercise/sports & physical job or 2x training): BMR x 1.9
-  	var extremeActivity = bmr * 1.9;
+  	var extremeActivity = parseFloat((bmr * 1.9).toFixed(2));
 
+    document.getElementById("lightActivity").innerHTML = lightActivity;
+    document.getElementById("moderateActivity").innerHTML = moderateActivity;
+    document.getElementById("highActivity").innerHTML = highActivity;
+    document.getElementById("extremeActivity").innerHTML = extremeActivity;
+
+    $(".activity-distribution-container").fadeIn();
   	$('.odometer').html(bmr);
 }
 
 function clearBMRCalculation(){
 	$('.odometer').html(0);
+  $(".activity-distribution-container").fadeOut();
 }
 
 function getAge(dateString) {
@@ -78,7 +85,7 @@ function calculateBMI(){
 }
 
 function clearBMICalculation(){
-	$('.odometer').html(0);	
+	$('.odometer').html(0);	  
 }
 
 function showNutritionStats(){
@@ -93,6 +100,7 @@ function hideNutritionStats(){
 $(document).ready(function(){
  var values = {};
  $(".nutrition-facts").fadeOut();
+ $(".activity-distribution-container").fadeOut();
  $.ajaxSetup({ cache: false });
  $('#foodSearch').keyup(function(){
   $('#foodSearchResults').html('');
