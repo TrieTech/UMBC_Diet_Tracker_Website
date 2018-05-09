@@ -5,8 +5,8 @@
 <head>
     <title>UMBC Diet Tracker</title>
     <script src="/lib/jquery.min.js"></script>
-    <script src="/lib/jquery.plugin.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="/lib/jquery.plugin.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -34,7 +34,7 @@
                     margin: auto;
                     position: absolute;
                     
-                    circle {
+                    #circle {
                         stroke-dashoffset: 0;
                         stroke: #ebebeb;
                         stroke-width: 15px;
@@ -157,9 +157,9 @@
     </div>
     <script>
         $('#svg1').val('70');
-        var val = 70;
-        var weekly = 55;
-        var overall = 45
+        var val = 90;
+        var weekly = val * 5/7;
+        var overall = val * 2/3;
         var $circle = $('#svg #bar');
         var $circle1 = $('#svg1 #bar1');
         var $circle2 = $('#svg2 #bar2');
@@ -214,7 +214,6 @@
                 $circle2.css({ strokeDashoffset: obj2.pct2-circumference2});
             }
         });
-        
 
     </script>
 
