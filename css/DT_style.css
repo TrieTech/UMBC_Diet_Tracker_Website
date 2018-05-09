@@ -439,7 +439,7 @@ table.app-table, td{
 
 p.submission-area{
   padding: 10px;
-  text-align: center;
+  text-align: right;
 }
 
 #foodSearchResults {
