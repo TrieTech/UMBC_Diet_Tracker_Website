@@ -28,33 +28,6 @@
         <h1>Diet Tracker</h1>
         <form action="" onsubmit="" id="dietTrackerForm" method="post">
           <table class="app-table">
-            <!-- "Food_Code": "12350000",
-            "Display_Name": "Sour cream dip",
-            "Portion_Default": "1.00000",
-            "Portion_Amount": ".25000",
-            "Portion_Display_Name": "cup",
-            "Factor": ".25000",
-            "Increment": ".25000",
-            "Multiplier": "1.00000",
-            "Grains": ".04799",
-            "Whole_Grains": ".00000",
-            "Vegetables": ".04070",
-            "Orange_Vegetables": ".00000",
-            "Drkgreen_Vegetables": ".00000",
-            "Starchy_vegetables": ".00000",
-            "Other_Vegetables": ".04070",
-            "Fruits": ".00000",
-            "Milk": ".00000",
-            "Meats": ".00000",
-            "Soy": ".00000",
-            "Drybeans_Peas": ".00000",
-            "Oils": ".00000",
-            "Solid_Fats": "105.64850",
-            "Added_Sugars": "1.57001",
-            "Alcohol": ".00000",
-            "Calories": "133.65000",
-            "Saturated_Fats": "7.36898" -->
-
             <tr>
               <td>Search Food Details: <input class="form-control" type="text" name="food-search" id="foodSearch" size="100%"/></td>              
             </tr>             
@@ -125,6 +98,22 @@
       <div class="overlay-content">
         <img class="overlay-chicklet" src="res/bmr_calculator_icon2.png" alt="BMR Calc"/>
         <h1>BMR Calculator</h1>
+
+        <!-- Harris-Benedict Formula
+          1. Calculate your BMR (basal metabolic rate):
+
+          Women: BMR = 655 + ( 4.35 x weight in pounds ) + ( 4.7 x height in inches ) - ( 4.7 x age in years )
+          Men: BMR = 66 + ( 6.23 x weight in pounds ) + ( 12.7 x height in inches ) - ( 6.8 x age in years )
+          2. Multiply your BMR by the appropriate activity factor, as follows:
+
+             Sedentary (little or no exercise): BMR x 1.2
+             Lightly active (light exercise/sports 1-3 days/week): BMR x 1.375
+             Moderately active (moderate exercise/sports 3-5 days/week): BMR x 1.55
+             Very active (hard exercise/sports 6-7 days a week): BMR x 1.725
+             Extra active (very hard exercise/sports & physical job or 2x training): BMR x 1.9
+          3. Your final number is the approximate number of calories you need each day to maintain your weight. -->
+
+        
       </div>
 
     </div>
