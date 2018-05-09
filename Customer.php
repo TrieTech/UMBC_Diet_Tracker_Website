@@ -12,11 +12,11 @@
 	$cust_lname = $_POST['LastName'];
 	$cust_username = $_POST ['Username'];
 	$cust_password = $_POST ['Password'];
-	$cust_address = $_POST['StreetAddress1'];
+	$cust_address = $_POST['Address1'];
 	$cust_city = $_POST['City'];
 	$cust_state = $_POST['State'];
 	$cust_phone = $_POST['CellPhone'];
-	$cust_email = $_POST ['FromEmailAddress' ];
+	$cust_email = $_POST ['EmailAddress' ];
 	$cust_occupation = $_POST ['Occupation' ];
 	
 
@@ -29,7 +29,8 @@
 	#"select * from cars where car_name='accord';"
 	
 
-	$constructed_query = "Insert INTO Customer (cust_name, cust_lname, cust_username , cust_password, cust_address ,cust_city, cust_state cust_phone , cust_email,cust_occupation) VALUES ('$cust_fname', '$cust_lname','$cust_username','$cust_password', '$cust_address','$cust_city','$cust_state', '$cust_phone' , '$cust_email','$cust_occupation' )";
+	$constructed_query = "Insert INTO Customer (cust_name, cust_lname, cust_username , cust_password, cust_address ,cust_city, cust_state ,cust_phone , cust_email
+	,cust_occupation) VALUES ('$cust_fname', '$cust_lname','$cust_username','$cust_password', '$cust_address','$cust_city','$cust_state', '$cust_phone' , '$cust_email','$cust_occupation' )";
 						  
 	
 	$result = mysqli_query($db, $constructed_query);
