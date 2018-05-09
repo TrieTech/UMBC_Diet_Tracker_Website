@@ -9,10 +9,15 @@ function closeNav(id) {
 }
 
 function calculateBMI(){
-  var heightFeet = document.getElementById("heightFeet").value;
-  var heightInches = document.getElementById("heightInches").value;
-  var weightPounds = document.getElementById("weightPounds").value;
-	$('.odometer').html(123.12);
+  	var heightFeet = parseInt(document.getElementById("heightFeet").value);
+  	var heightInches = parseInt(document.getElementById("heightInches").value);
+  	var totalInches = (heightFeet * 12) + heightInches;
+
+  	var weightPounds = parseFloat(document.getElementById("weightPounds").value);
+
+  	var bmi = 703 * (weightPounds / Math.pow(totalInches, 2));
+
+  	$('.odometer').html(bmi);
 }
 
 function clearBMICalculation(){
