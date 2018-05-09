@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link rel="stylesheet" type="text/css" href="css/DT_style.css" title="style" />
+<script type = "text/javascript"  src = "./js/Validation.js" ></script>
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="css/DTsignupPage.css"/>
 
@@ -31,70 +32,66 @@ Diet Tracking Form
             </ul>
         </div>
 
-<form action="Diet.php">
-
-<table>
-	<tr>
-		<td>
-		<label>Date of Birth</label>
-		</td>
-		<td>
-		<input class="DTF" type="text" id="DOB" name="DOB"/>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<label>Weight</label>
-		</td>
-		<td>
-		<input class="DTF" type="text" id="Weight" name="Weight"/>
-		</td>
-	
-	</tr>
-	
-	<tr>
-		<td>
-		<label>Height</label>
-		</td>
-		<td>
-		<input class="DTF" type="text" id="Height" name="Height"/>
-		</td>
-	
-	</tr>
-	
-	<tr>
-		<td>
-		<label>Calories</label>
-		</td>
+<form action="Diet.php" id="Diet" method="post" onsubmit="return performLoginValidation();">
+	<table>
+		<tr>
+			<td>
+			<label>Date of Birth</label>
+			</td>
+			<td>
+			<input class="DTF" type="text" id="DOB" name="DOB"/>
+			</td>
+		</tr>
 		
-		<td>
-		<input class="DTF" type="text" id="Calories" name="Calories"/>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-		<label>Activity</label>
-		</td>
+		<tr>
+			<td>
+			<label>Weight</label>
+			</td>
+			<td>
+			<input class="DTF" type="text" id="Weight" name="Weight"/>
+			</td>
 		
-		<td>
-		<input class="DTF" type="text" id="Activity" name="Activity"/>
-		</td>	
-	</tr>
-	
-	<tr>
-		<td>
-		<input name="Submit" type="submit" value="Submit" />
-		</td>
-		<td>
-		<input class="button" type="reset" value="Reset" />
-		</td>
-	</tr>
-</table>
-
-
-
+		</tr>
+		
+		<tr>
+			<td>
+			<label>Height</label>
+			</td>
+			<td>
+			<input class="DTF" type="text" id="Height" name="Height"/>
+			</td>
+		
+		</tr>
+		
+		<tr>
+			<td>
+			<label>Calories</label>
+			</td>
+			
+			<td>
+			<input class="DTF" type="text" id="Calories" name="Calories"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			<label>Activity</label>
+			</td>
+			
+			<td>
+			<input class="DTF" type="text" id="Activity" name="Activity"/>
+			</td>	
+		</tr>
+		
+		<tr>
+			<td>
+			<input name="Submit" type="submit" value="Submit" />
+			</td>
+			<td>
+			<input class="button" type="reset" value="Reset" />
+			</td>
+		</tr>
+	</table>
 </form>
 
 <div class="footer">Copyright &copy;&nbsp;AlphaTech.com
