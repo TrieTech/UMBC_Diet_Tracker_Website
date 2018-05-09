@@ -1,9 +1,7 @@
 <?php
-$mysql_hostname = "studentdb-maria.gl.umbc.edu";
-$mysql_user = "adsouza1";
-$mysql_password = "adsouza1";
-$mysql_database = "adsouza1";
-$prefix = "";
-$bd = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password) or die("Could not connect database");
-mysqli_select_db($bd, $mysql_database) or die("Could not select database");
+   define('DB_SERVER', 'studentdb-maria.gl.umbc.edu');
+   define('DB_USERNAME', 'adsouza1');
+   define('DB_PASSWORD', 'adsouza1');
+   define('DB_DATABASE', 'adsouza1');
+   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 ?>
