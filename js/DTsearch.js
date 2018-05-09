@@ -35,6 +35,9 @@ function autocomplete(inp, arr) {
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
+             
+              // Navigate to the respective link that was clicked
+              window.location.href = quickLinks[linkNames.indexOf(inp.value)];
           });
           a.appendChild(b);
         }
@@ -98,9 +101,11 @@ function autocomplete(inp, arr) {
 }
 
 /*An array containing all the country names in the world:*/
-var quickLinks = ["Contact Us", "About Us", "Terms of Use", "Facebook", "Twitter", "Google Plus"];
+var linkNames = ["Contact Us", "About Us", "Terms of Use", "Facebook", "Twitter", "Google Plus"];
+var quickLinks = ["DTcontactus.html", "DTaboutus.html", "DTtermsofuse.html", "http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com",  
+"https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons", "https://plus.google.com/share?url=https://simplesharebuttons.com"];
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 window.onload=function(){
-  autocomplete(document.getElementById("myInput"), quickLinks);
+  autocomplete(document.getElementById("myInput"), linkNames);
 }
