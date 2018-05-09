@@ -7,10 +7,76 @@
 
 <head>
     <title>UMBC Diet Tracker</title>
+    <script type = "text/javascript"  src = "food_asynch.js" ></script>
+    <script src="/lib/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="/lib/jquery.plugin.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_profile.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_progress.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_style.css" />
+    <script type="text/javascript" src="./js/DTsearch.js"></script>
+    <style >
+        <style>
+     #circ-cont {
+                display: block;
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+                border-radius: 100%;
+                position: relative;
+                margin-top: 30px;
+                transition: all 0.3s ease-out;
+
+                #svg {
+                    transform: rotate(-90deg);
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    position: absolute;
+                    
+                    #circle {
+                        stroke-dashoffset: 0;
+                        stroke: #ebebeb;
+                        stroke-width: 15px;
+
+                    }
+
+                    #bar {
+                        stroke: #ebebeb;
+                        stroke-width: 15px;
+                    }
+                }
+                
+                .shadow {
+                    position: absolute;
+                    top: 175px;
+                    left: 0;
+                    right: 10px;
+                    margin: auto;
+                    opacity: 0.8;
+                    
+                }
+                
+                .section {
+                    text-transform: uppercase;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    text-align: center;
+                    bottom: 70px;
+                    font-size: 18px;
+                    font-family: Arial, sans-serif;
+                    
+                }
+                
+            }
+        </style>
+    </style>
 </head>
 
 <body>
@@ -22,28 +88,28 @@
 
         <div id="nav">
             <ul>
-                <li><a href="DTprofile.php" title="Signed In"><?php echo $login_fname; ?></a></li>
-                <li><a href="index.html" title="homepage">Home</a></li>
-                <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
-                <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
+                <li><a href="DTprofile.php" title="Signed In">Hi, <?php echo $login_fname; ?></a></li>
+                <li><a href="index.php" title="homepage">Home</a></li>
+                <li><a href="DTcontactus.php" title="contact us page">Contact Us</a></li>
+                <li><a href="DTaboutus.php" title="About us page">About Us</a></li>
                 <li><a href ="logout.php">Sign Out</a></li>
                 <li class="float-right"><input class="search" type="text" name="search"/></li>
             </ul>
         </div>
 
+    <form method ="post" action="">
         <div class="prof-container">
-            <h2>Welcome <?php echo $login_session; ?> !<h2>
+            <h2>Welcome <?php echo $login_session; ?> !</h2>
 
             <img src="./res/blank-profile-picture-973460_960_720.png" alt="personal image" style="width: 300px; height: 335px;" />
-            <p>"Living Life"</p>
+            <p><input style="border: none;outline: none;background-color: transparent;font-family: inherit; font-size: inherit;" type="text" name="quote" id="quote" placeholder="Living Life" onkeyup="showResult(this.value)"></p>
+            <p><div id="typearea"></div></p>
             <p><img class="headericon" src="./res/open-letter.png" alt="email image" />&nbsp;&nbsp;<?php echo $login_email; ?></p>
 
-            <p><img class="headericon" src="./res/briefcase.png" alt="work img" />&nbsp;&nbsp;Student</p>
+            <p><img class="headericon" src="./res/briefcase.png" alt="work img" />&nbsp;&nbsp;<?php echo $login_occupation; ?></p>
 
-            <p><img class="headericon" src="./res/map.png" alt="map image" />&nbsp;&nbsp;Bethesda, MD</p>
+            <p><img class="headericon" src="./res/map.png" alt="map image" />&nbsp;&nbsp; <?php echo $login_city;?> <?php echo $login_state ?></p>
 
-            <h2>Diet Tracking Progress</h2>
-            <p><label>Daily Progress</label></p>
             <h2>Diet Tracking Progress</h2>
             <p><label>Daily Progress</label></p>
             <div id="circ-cont" data-pct="100">
@@ -67,6 +133,8 @@
                 </svg>
             </div>
         </div>
+    </form>
+
 
 
         <div class="footer">Copyright &copy;&nbsp;AlphaTech.com
@@ -92,8 +160,8 @@
     </div>
     <script>
         var val = 70;
-        var weekly = 55;
-        var overall = 45
+        var weekly = val * 5/7;
+        var overall = val * 2/3;
         var $circle = $('#svg #bar');
         var $circle1 = $('#svg1 #bar1');
         var $circle2 = $('#svg2 #bar2');

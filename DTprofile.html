@@ -5,8 +5,8 @@
 <head>
     <title>UMBC Diet Tracker</title>
     <script src="/lib/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="/lib/jquery.plugin.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,6 +17,12 @@
     <script type="text/javascript" src="./js/DTsearch.js"></script>
     <style >
         <style>
+        input[type="text"]:quote {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: inherit;}
      #circ-cont {
                 display: block;
                 width: 300px;
@@ -34,7 +40,7 @@
                     margin: auto;
                     position: absolute;
                     
-                    circle {
+                    #circle {
                         stroke-dashoffset: 0;
                         stroke: #ebebeb;
                         stroke-width: 15px;
@@ -73,7 +79,6 @@
             }
 
     </style>
-    </style>
 </head>
 
 
@@ -102,7 +107,7 @@
             <h2>Welcome Jay!</h2>
 
             <img src="./res/22246554.jpg" alt="personal image" style="width: 100%; height: 235px;" />
-            <p>"Living Life"</p>
+            <p><input style="border: none;outline: none;background-color: transparent;font-family: inherit; font-size: inherit;" type="text" name="quote" id="quote">"Living Life"</p>
             <p><img class="headericon" src="./res/open-letter.png" alt="email image" />&nbsp;&nbsp;earlyj1@umbc.edu</p>
 
             <p><img class="headericon" src="./res/briefcase.png" alt="work img" />&nbsp;&nbsp;Student</p>
@@ -157,9 +162,9 @@
     </div>
     <script>
         $('#svg1').val('70');
-        var val = 70;
-        var weekly = 55;
-        var overall = 45
+        var val = 90;
+        var weekly = val * 5/7;
+        var overall = val * 2/3;
         var $circle = $('#svg #bar');
         var $circle1 = $('#svg1 #bar1');
         var $circle2 = $('#svg2 #bar2');
@@ -214,7 +219,6 @@
                 $circle2.css({ strokeDashoffset: obj2.pct2-circumference2});
             }
         });
-        
 
     </script>
 
