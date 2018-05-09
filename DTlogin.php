@@ -50,7 +50,11 @@
                 <li><a class="active" href="DTlogin.html" title="login page">Sign In/Join</a></li>
                 <li><a href="DTcontactus.html" title="contact us page">Contact Us</a></li>
                 <li><a href="DTaboutus.html" title="About us page">About Us</a></li>
-                <li class="float-right"><input class="search" type="text" name="search" /></li>
+                <li class="float-right">
+                  <div class="autocomplete">
+                    <input id="DTsearch" class="search" type="text" name="search" />  
+                  </div>
+                </li>
             </ul>
         </div>
         <section class="logcontainer">

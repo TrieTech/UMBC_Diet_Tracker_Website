@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="./css/DT_profile.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_progress.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_style.css" />
-    <script type="text/javascript" src="./js/DTsearch.js"></script>
+    <script type="text/javascript" src="./js/DTmemberSearch.js"></script>
     <style >
         <style>
      #circ-cont {
@@ -93,16 +93,20 @@
                 <li><a href="DTcontactus.php" title="contact us page">Contact Us</a></li>
                 <li><a href="DTaboutus.php" title="About us page">About Us</a></li>
                 <li><a href ="logout.php">Sign Out</a></li>
-                <li class="float-right"><input class="search" type="text" name="search"/></li>
+                <li class="float-right">
+                    <div class="autocomplete">
+                        <input id="DTm-search" class="search" type="text" name="search" />  
+                    </div></li>
             </ul>
         </div>
 
     <form method ="post" action="">
         <div class="prof-container">
+
             <h2>Welcome <?php echo $login_session; ?> !</h2>
 
             <img src="./res/blank-profile-picture-973460_960_720.png" alt="personal image" style="width: 300px; height: 335px;" />
-            <p><input style="border: none;outline: none;background-color: transparent;font-family: inherit; font-size: inherit;" type="text" name="quote" id="quote" placeholder="Living Life" onkeyup="showResult(this.value)"></p>
+            <p><input style="border: none;outline: none;background-color: transparent;font-family: inherit; font-size: inherit;" type="text" name="quote" id="quote" placeholder="Favorite quote.." onkeyup="showResult(this.value)"></p>
             <p><div id="typearea"></div></p>
             <p><img class="headericon" src="./res/open-letter.png" alt="email image" />&nbsp;&nbsp;<?php echo $login_email; ?></p>
 
