@@ -4,6 +4,7 @@
 <head>
   	<title>Diet Tracker Signup form</title>
 	<link rel="stylesheet" type="text/css" href="css/DT_style.css" title="style" />
+	<script type = "text/javascript"  src = "./js/Validation.js" ></script>
 	  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<link rel="stylesheet" href="css/DTsignupPage.css"/>
 	<script type="text/javascript" src="./js/DTsearch.js"></script>
@@ -40,21 +41,8 @@ Fill in this form to create a free account.
 	
 	
 		
-<form action="Customer.php" id="SignUp" method="post" onsubmit="return ValidateForm(this);">
-<script type="text/javascript">
-    function ValidateForm(frm) {
-        if (frm.FirstName.value == "") { alert('Please Enter Your First Name.'); frm.FirstName.focus(); return false; }
-        if (frm.LastName.value == "") { alert('Please Enter Your Last Name.'); frm.LastName.focus(); return false; }
-		if (frm.CellPhone.value == "") { alert('Please Enter a Phone Number.'); frm.CellPhone.focus(); return false; }
-        if (frm.EmailAddress.value == "") { alert('Please Enter Your Email'); frm.EmailAddress.focus(); return false; }
-		if (frm.uname.value == "") { alert('Please Enter a User-name.'); frm.uname.focus(); return false; }
-		if (frm.Password.value == "") { alert('Please Enter a Password.'); frm.Password.focus(); return false; }
-		if (frm.Address1.value == "") { alert('Please Enter Your Address.'); frm.Address1.focus(); return false; }
-        if (frm.City.value == "") { alert('Please Enter Your City.'); frm.City.focus(); return false; }
-		if (frm.Zipcode.value == "") { alert('Please Enter a Zipcode.'); frm.Zipcode.focus(); return false; }
-		
-    }
-</script>
+<form action="Customer.php" id="SignUp" method="post" onsubmit="return performSignupValidation();">
+
 <table class="center" width="50%">
 		<tr>
 			<td>
