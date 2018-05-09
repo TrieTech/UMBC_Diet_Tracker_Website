@@ -53,7 +53,7 @@
                 <li class="float-right">
                   <div class="autocomplete">
                     <input id="DTsearch" class="search" type="text" name="search" />  
-                  </div>                  
+                  </div>
                 </li>
             </ul>
         </div>
